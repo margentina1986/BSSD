@@ -1,0 +1,43 @@
+h1 {
+    color: rgb(255, 77, 0);
+    /* 炎のイメージ */
+    font-size: 60px;
+    text-align: center;
+    text-shadow: 2px 2px 3px red;
+    margin-bottom: 0;
+    /* 下の余白を消す */
+}
+
+h2 {
+    color: rgb(255, 55, 0);
+    font-size: 20px;
+    text-align: center;
+    text-shadow: 2px 2px 3px red;
+    margin-top: 0;
+    /* 上の余白を消す */
+
+}
+
+h3 {
+    color: rgb(255, 77, 0);
+    font-size: 30px;
+    text-align: center;
+    text-shadow: 2px 2px 3px red;
+}
+
+h4 {
+    color: whitesmoke;
+    font-size: 15px;
+    text-align: center;
+}
+
+p {
+    color: whitesmoke;
+    width: 500px;
+    border: 1px solid whitesmoke;
+    font-size: 15px;
+    margin: 0 auto;
+    /* 要素を中央に配置 */
+    background-color: rgba(255, 255, 255, 0.1)
+        /* 少し透過*/
+}

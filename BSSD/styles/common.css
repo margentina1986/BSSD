@@ -1,0 +1,43 @@
+html {
+    background-color: #00039f;
+    /*Into Blueのイメージ */
+}
+
+nav {
+    position: fixed;
+    /* 固定表示 */
+    top: 0;
+    /* 画面の一番上に配置 */
+    left: 0;
+    width: 100%;
+    /* 横幅いっぱい */
+    background-color: #00039f;
+    border-bottom: 1px solid #ccc;
+    z-index: 1000;
+    /* コンテンツより前面に表示 */
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: rgb(255, 55, 0);
+    font-weight: bold;
+}
+
+
+
+body {
+    padding-top: 60px;
+    /* メニューの高さに合わせて調整 */
+}
