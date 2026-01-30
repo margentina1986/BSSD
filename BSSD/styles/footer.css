@@ -13,3 +13,12 @@ footer a {
 footer a:hover {
     text-decoration: underline; /* ホバー時だけ下線 */
 }
+.back-to-top {
+    color: whitesmoke;
+    font-size: 12px;
+    opacity: 0.7;
+    text-decoration: none;
+}
+.back-to-top:hover {
+    text-decoration: underline;
+}
