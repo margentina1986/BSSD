@@ -1,5 +1,8 @@
 <?php
-require 'db_connect.php';
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
+
+require __DIR__ . '/config/db_connect.php';
 
 $results = [];
 
@@ -69,6 +72,8 @@ if (!empty($members)) {
 <head>
 <meta charset="UTF-8">
 <title>Search</title>
+<link rel="stylesheet" href="./styles/common.css">
+<link rel="stylesheet" href="./styles/search.css">
 </head>
 
 <body id="page-top">
@@ -135,7 +140,7 @@ document.getElementById('part').addEventListener('change', function () {
 
     if (!partId) return;
 
-    fetch('ajax_instrument.php?part_id=' + partId)
+    fetch('./PHP/ajax_instrument.php?part_id=' + partId)
         .then(res => res.text())
         .then(html => instrument.innerHTML += html);
 });
@@ -149,7 +154,7 @@ document.getElementById('instrument').addEventListener('change', function () {
 
     if (!instrumentId) return;
 
-    fetch('ajax_member.php?instrument_id=' + instrumentId)
+    fetch('./PHP/ajax_member.php?instrument_id=' + instrumentId)
         .then(res => res.text())
         .then(html => member.innerHTML += html);
 });
