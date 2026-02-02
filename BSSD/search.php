@@ -49,7 +49,20 @@ if (!empty($_GET)) {
     $stmt = $pdo->prepare($sql);
     $stmt->execute($params);
     $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+// ===== メンバー検索回数を加算 =====
+if (!empty($members)) {
+    $placeholders = implode(',', array_fill(0, count($members), '?'));
+    $updateSql = "
+        UPDATE m_members
+        SET search_count = search_count + 1
+        WHERE member_id IN ($placeholders)
+    ";
+    $updateStmt = $pdo->prepare($updateSql);
+    $updateStmt->execute($members);
 }
+
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="ja">
