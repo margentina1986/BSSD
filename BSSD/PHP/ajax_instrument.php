@@ -1,5 +1,5 @@
 <?php
-require 'db_connect.php';
+require __DIR__ . '/../config/db_connect.php';
 
 $part_id = $_GET['part_id'] ?? '';
 

@@ -1,5 +1,5 @@
 <?php
-require 'db_connect.php';
+require __DIR__ . '/../config/db_connect.php';
 
 $instrument_id = $_GET['instrument_id'] ?? '';
 
