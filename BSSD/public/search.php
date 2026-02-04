@@ -2,71 +2,81 @@
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
-require __DIR__ . '/config/db_connect.php';
+require __DIR__ . '/../config/db_connect.php';
 
+// ====== パート一覧取得 ======
+$partStmt = $pdo->query("SELECT part_id, part_name FROM m_parts ORDER BY CAST(part_id AS UNSIGNED) ASC");
+$parts = $partStmt->fetchAll(PDO::FETCH_ASSOC);
+
+// ====== 検索処理 ======
 $results = [];
+$conditions = $_GET['conditions'] ?? [];
 
-/* ========= 検索処理 ========= */
-if (!empty($_GET)) {
+// メンバー選択があるか確認
+$hasMember = false;
+foreach ($conditions as $cond) {
+    if (!empty($cond['member'])) {
+        $hasMember = true;
+        break;
+    }
+}
 
-    $part       = $_GET['part'] ?? '';
-    $instrument = $_GET['instrument'] ?? '';
-    $members    = array_filter($_GET['member'] ?? []);
-
+if ($hasMember) {
     $sql = "
     SELECT DISTINCT
         s.song_id,
         s.song_name,
         s.work_title
     FROM m_songs s
-    JOIN m_performances p ON s.song_id = p.song_id
-    JOIN m_instrument i   ON p.instrument_id = i.instrument_id
-    JOIN m_parts pa       ON i.part_id = pa.part_id
     WHERE 1=1
     ";
-
     $params = [];
 
-    if ($part !== '') {
-        $sql .= " AND pa.part_id = ?";
-        $params[] = $part;
-    }
+    foreach ($conditions as $cond) {
+        if (empty($cond['member'])) continue;
 
-    if ($instrument !== '') {
-        $sql .= " AND i.instrument_id = ?";
-        $params[] = $instrument;
-    }
-
-    // 複数メンバー AND 検索
-    foreach ($members as $member_id) {
         $sql .= "
         AND EXISTS (
             SELECT 1
-            FROM m_performances p2
-            WHERE p2.song_id = s.song_id
-              AND p2.member_id = ?
-        )";
-        $params[] = $member_id;
+            FROM m_performances p
+            JOIN m_instrument i ON p.instrument_id = i.instrument_id
+            WHERE p.song_id = s.song_id
+              AND p.member_id = ?
+        ";
+        $params[] = $cond['member'];
+
+        if (!empty($cond['instrument'])) {
+            $sql .= " AND i.instrument_id = ?";
+            $params[] = $cond['instrument'];
+        }
+        if (!empty($cond['part'])) {
+            $sql .= " AND i.part_id = ?";
+            $params[] = $cond['part'];
+        }
+        $sql .= ")";
     }
 
     $stmt = $pdo->prepare($sql);
     $stmt->execute($params);
     $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
-// ===== メンバー検索回数を加算 =====
-if (!empty($members)) {
-    $placeholders = implode(',', array_fill(0, count($members), '?'));
-    $updateSql = "
-        UPDATE m_members
-        SET search_count = search_count + 1
-        WHERE member_id IN ($placeholders)
-    ";
-    $updateStmt = $pdo->prepare($updateSql);
-    $updateStmt->execute($members);
-}
 
+    // 検索回数更新
+    $members = [];
+    foreach ($conditions as $cond) {
+        if (!empty($cond['member'])) {
+            $members[] = $cond['member'];
+        }
+    }
+    $members = array_unique($members);
+    if ($members) {
+        $placeholders = implode(',', array_fill(0, count($members), '?'));
+        $updateSql = "UPDATE m_members SET search_count = search_count + 1 WHERE member_id IN ($placeholders)";
+        $stmt = $pdo->prepare($updateSql);
+        $stmt->execute($members);
+    }
 }
-
 ?>
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -75,88 +85,121 @@ if (!empty($members)) {
 <link rel="stylesheet" href="./styles/common.css">
 <link rel="stylesheet" href="./styles/search.css">
 </head>
-
 <body id="page-top">
-<nav id="menu"></nav>
-
 <h1>Search</h1>
 <h2>パート → 楽器 → メンバーを選択して検索</h2>
 
 <form method="GET" action="search.php">
+  <div id="conditions">
+    <div class="condition">
+      <!-- パート -->
+      <select name="conditions[0][part]" class="part">
+        <option value="">-- パート --</option>
+        <?php foreach ($parts as $part): ?>
+        <option value="<?= $part['part_id'] ?>"><?= htmlspecialchars($part['part_name']) ?></option>
+        <?php endforeach; ?>
+      </select>
 
-  <!-- パート -->
-  <select id="part" name="part">
-    <option value="">-- パート選択 --</option>
-    <?php
-      $stmt = $pdo->query("SELECT part_id, part_name FROM m_parts ORDER BY part_id");
-      foreach ($stmt as $row) {
-        echo '<option value="'.$row['part_id'].'">'
-           . htmlspecialchars($row['part_name'])
-           . '</option>';
-      }
-    ?>
-  </select>
+      <!-- 楽器 -->
+      <select name="conditions[0][instrument]" class="instrument">
+        <option value="">-- 楽器 --</option>
+      </select>
 
-  <!-- 楽器 -->
-  <select id="instrument" name="instrument">
-    <option value="">-- 楽器選択 --</option>
-  </select>
+      <!-- メンバー -->
+      <select name="conditions[0][member]" class="member">
+        <option value="">-- メンバー --</option>
+      </select>
+    </div>
+  </div>
 
-  <!-- メンバー（複数選択可） -->
-  <select id="member" name="member[]" multiple size="5">
-    <option value="">-- メンバー選択 --</option>
-  </select>
+  <div class="btn-group">
+    <button type="button" id="addCondition">＋追加</button>
+    <button type="button" id="removeCondition">－削除</button>
+  </div>
 
-  <br><br>
-  <button type="submit">検索</button>
-
+  <div class="search-btn-wrapper">
+    <button type="submit">検索</button>
+  </div>
 </form>
 
 <?php if (!empty($_GET)): ?>
 <hr>
 <h2>検索結果</h2>
-
 <?php if (empty($results)): ?>
-  <p>該当する楽曲はありません</p>
+<p>該当する楽曲はありません</p>
 <?php else: ?>
-  <?php foreach ($results as $row): ?>
-    <div class="song">
-      <h3><?= htmlspecialchars($row['song_name']) ?></h3>
-      <p>収録作品：<?= htmlspecialchars($row['work_title']) ?></p>
-    </div>
-  <?php endforeach; ?>
+<?php foreach ($results as $row): ?>
+<div class="song">
+  <h3><strong><?= htmlspecialchars($row['song_name']) ?></strong>（<?= htmlspecialchars($row['work_title']) ?>）</h3>
+</div>
+<?php endforeach; ?>
 <?php endif; ?>
 <?php endif; ?>
 
 <script>
-/* ===== パート → 楽器 ===== */
-document.getElementById('part').addEventListener('change', function () {
-    const partId = this.value;
-    const instrument = document.getElementById('instrument');
-    const member = document.getElementById('member');
-
-    instrument.innerHTML = '<option value="">-- 楽器選択 --</option>';
-    member.innerHTML = '<option value="">-- メンバー選択 --</option>';
-
+// ===== パート→楽器 / 楽器→メンバー連動 =====
+document.addEventListener('change', function(e) {
+  // パート → 楽器
+  if (e.target.classList.contains('part')) {
+    const partId = e.target.value;
+    const instrument = e.target.closest('.condition').querySelector('.instrument');
+    const member = e.target.closest('.condition').querySelector('.member');
+    instrument.innerHTML = '<option value="">-- 楽器 --</option>';
+    member.innerHTML = '<option value="">-- メンバー --</option>';
     if (!partId) return;
+    fetch('/ajax/ajax_instrument.php?part_id=' + partId)
+      .then(res => res.text())
+      .then(html => instrument.innerHTML += html);
+  }
 
-    fetch('./PHP/ajax_instrument.php?part_id=' + partId)
-        .then(res => res.text())
-        .then(html => instrument.innerHTML += html);
+  // 楽器 → メンバー
+  if (e.target.classList.contains('instrument')) {
+    const instrumentId = e.target.value;
+    const member = e.target.closest('.condition').querySelector('.member');
+    member.innerHTML = '<option value="">-- メンバー --</option>';
+    if (!instrumentId) return;
+    fetch('/ajax/ajax_member.php?instrument_id=' + instrumentId)
+      .then(res => res.text())
+      .then(html => member.innerHTML += html);
+  }
 });
 
-/* ===== 楽器 → メンバー ===== */
-document.getElementById('instrument').addEventListener('change', function () {
-    const instrumentId = this.value;
-    const member = document.getElementById('member');
+// ===== 条件追加/削除 =====
+let index = 1;
+const max = 5;
+const conditionsContainer = document.getElementById('conditions');
 
-    member.innerHTML = '<option value="">-- メンバー選択 --</option>';
+document.getElementById('addCondition').addEventListener('click', () => {
+  if (index >= max) return alert(`検索は最大${max}人までです`);
+  const base = document.querySelector('.condition');
+  const clone = base.cloneNode(true);
+  clone.querySelectorAll('select').forEach(select => {
+    select.name = select.name.replace(/\[\d+\]/, `[${index}]`);
+    const first = select.options[0];
+    select.innerHTML = '';
+    select.appendChild(first);
+    select.selectedIndex = 0;
+  });
+  conditionsContainer.appendChild(clone);
+  index++;
+});
 
-    if (!instrumentId) return;
+document.getElementById('removeCondition').addEventListener('click', () => {
+  const conditions = document.querySelectorAll('#conditions .condition');
+  if (conditions.length <= 1) return alert('検索には最低1人は必要です');
+  conditions[conditions.length - 1].remove();
+  index--;
+});
 
-    fetch('./PHP/ajax_member.php?instrument_id=' + instrumentId)
-        .then(res => res.text())
-        .then(html => member.innerHTML += html);
+// ===== 送信時チェック =====
+const form = document.querySelector('form');
+form.addEventListener('submit', e => {
+  const members = document.querySelectorAll('.member');
+  const hasMember = [...members].some(m => m.value !== '');
+  if (!hasMember) {
+    alert('最低1人はメンバーを選択してください');
+    e.preventDefault();
+  }
 });
 </script>
 
