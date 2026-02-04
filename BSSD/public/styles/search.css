@@ -43,17 +43,24 @@ p {
         /* 少し透過*/
 }
 
-.search-wrapper {
+.btn-wrapper,
+.search-btn-wrapper {
     display: flex;
-    justify-content: center;
-    margin-top: 40px;
+    justify-content: center;/* 中央に配置*/
+    width: 100%;
+    margin-bottom: 32px; /* 検索ボタンの下に余白（検索結果までの距離） */
 }
 
 .search-form {
     display: flex;
     flex-direction: column;
-    gap: 16px;
     align-items: center;
+}
+
+.condition {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
 }
 
 .search-form select,
@@ -70,11 +77,9 @@ p {
 .btn-group {
     display: flex;
     gap: 16px;           /* 追加・削除ボタンの間隔 */
-    margin-bottom: 24px; /* ボタン群と次の要素（検索ボタン）との距離 */
-}
-
-.search-btn-wrapper {
-    margin-bottom: 32px; /* 検索ボタンの下に余白（検索結果までの距離） */
+    margin-top: 32px;   /* プルダウンと追加・削除ボタンとの距離 */
+    margin-bottom: 24px; /* 追加・削除ボタン群と検索ボタンとの距離 */
+    justify-content: center;/* 中央に配置*/
 }
 
 select {
