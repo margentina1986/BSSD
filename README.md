@@ -24,4 +24,4 @@
 - **Q&A**　想定質問と回答の表を貼ります。 [qa.html](BSSD/qa.html)
 - **バージョン管理表**　このページのバージョン管理ではなく、各楽曲のバージョン違いをどう取り扱っているかの一覧表です。  [version.html](BSSD/version.html)
 - **コンタクト機能**　Version2または3で追加予定。ユーザー⇒管理者への一方通行で、返信は行いません。文章のみのメッセージ機能と、jpeg・png・PDFを添付できる修正依頼機能の2種類を作ります。  [contact.html](BSSD/contact.html)
-- **管理画面**　ここのみ要ログインで、CRUD機能とCSVの入出力を使用できます。  [Admin.html](BSSD/Admin.html)
+- **管理画面**　CRUD機能とCSVの入出力を使用できます。ここのみログイン機能を付けます。  [Admin.html](BSSD/Admin.html)
