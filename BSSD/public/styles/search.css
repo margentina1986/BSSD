@@ -1,0 +1,82 @@
+h1 {
+    color: rgb(255, 77, 0);
+    /* 炎のイメージ */
+    font-size: clamp(32px, 6vw, 60px);
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(255, 0, 0, 0.7);
+    margin-bottom: 0;
+    /* 下の余白を消す */
+}
+
+h2 {
+    color: rgb(255, 55, 0);
+    font-size: clamp(14px, 2.5vw, 22px);
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(255, 0, 0, 0.7);
+    margin-top: 0;
+    /* 上の余白を消す */
+
+}
+
+h3 {
+    color: rgb(255, 55, 0);
+    font-size: clamp(14px, 2.5vw, 22px);
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(255, 0, 0, 0.7);
+    margin-top: 0;
+    /* 上の余白を消す */
+
+}
+
+p {
+    color: whitesmoke;
+    max-width: 900px;
+    width: 90%;
+    font-size: 16px;
+    text-align: left;
+    margin: 0 auto;
+    /* 中央に枠、文章左詰め */
+    padding: 16px 20px;
+    line-height: 1.7;
+    /* 右端で折り返す */
+    background-color: rgba(255, 255, 255, 0.1)
+        /* 少し透過*/
+}
+
+.search-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.search-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+}
+
+.search-form select,
+.search-form button {
+    width: 240px;
+    padding: 8px;
+    font-size: 14px;
+}
+
+.search-form button {
+    cursor: pointer;
+}
+
+.btn-group {
+    display: flex;
+    gap: 16px;           /* 追加・削除ボタンの間隔 */
+    margin-bottom: 24px; /* ボタン群と次の要素（検索ボタン）との距離 */
+}
+
+.search-btn-wrapper {
+    margin-bottom: 32px; /* 検索ボタンの下に余白（検索結果までの距離） */
+}
+
+select {
+    margin-bottom: 12px;
+}

@@ -1,0 +1,41 @@
+body {
+  background: linear-gradient(135deg, #3F2B72 0%, #2E1A47 100%);
+  /* FYOP意識しつつ、トップページの画像背景色に合わせる */
+  padding-top: 60px; /* メニューの高さに合わせて */
+  margin: 0;
+  min-height: 100vh; /* 画面高さ確保 */
+}
+
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-bottom: 1px solid #ccc;
+  z-index: 1000;
+  background: linear-gradient(135deg, #3F2B72 0%, #2E1A47 100%);
+  /* FYOP意識しつつ、トップページの画像背景色に合わせる */
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 10px;
+  text-align: center;
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: rgb(255, 55, 0);
+  font-weight: bold;
+}
+
+body {
+  padding-top: 60px;
+}

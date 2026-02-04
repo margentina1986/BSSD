@@ -1,0 +1,34 @@
+h1 {
+    color: rgb(255, 77, 0);
+    /* 炎のイメージ */
+    font-size: clamp(32px, 6vw, 60px);
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(255, 0, 0, 0.7);
+    margin-bottom: 0;
+    /* 下の余白を消す */
+}
+
+h2 {
+    color: rgb(255, 55, 0);
+    font-size: clamp(14px, 2.5vw, 22px);
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(255, 0, 0, 0.7);
+    margin-top: 0;
+    /* 上の余白を消す */
+
+}
+
+p {
+    color: whitesmoke;
+    max-width: 900px;
+    width: 90%;
+    font-size: 16px;
+    text-align: left;
+    margin: 0 auto;
+    /* 中央に枠、文章左詰め */
+    padding: 16px 20px;
+    line-height: 1.7;
+    /* 右端で折り返す */
+    background-color: rgba(255, 255, 255, 0.1)
+        /* 少し透過*/
+}

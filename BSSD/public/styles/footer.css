@@ -1,0 +1,24 @@
+footer {
+    color: whitesmoke;        /* 白文字 */
+    font-size: 12px;          /* 小さめの文字 */
+    text-align: center;       /* 中央揃え */
+    margin-top: 40px;         /* 本文との間に余白 */
+    opacity: 0.7;             /* 少し薄くして邪魔にならないように */
+}
+footer a {
+    color: whitesmoke;        /* リンクも白 */
+    text-decoration: none;    /* 下線なし */
+    opacity: 0.8;
+}
+footer a:hover {
+    text-decoration: underline; /* ホバー時だけ下線 */
+}
+.back-to-top {
+    color: whitesmoke;
+    font-size: 12px;
+    opacity: 0.7;
+    text-decoration: none;
+}
+.back-to-top:hover {
+    text-decoration: underline;
+}
