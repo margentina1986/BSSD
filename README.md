@@ -7,8 +7,10 @@
 - HTML
 - CSS
 - PHP
+- JavaScript
 - Python（Version2で追加予定のバッチ処理で使用します）
-
+- MySQL
+ツールはVS CodeとDBeaverを使用しています。
 ---
 
 ## 各ページの説明と今後の更新予定
