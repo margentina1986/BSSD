@@ -8,10 +8,12 @@
 - CSS
 - PHP
 - JavaScript
-- Python（Version2で追加予定のバッチ処理で使用します）
 - MySQL
-ツールはVS CodeとDBeaverを使用しています。
+- Python（Version2で追加予定のバッチ処理で使用します）
+
+  ツールはVS CodeとDBeaverを使用しています。
 ---
+
 
 ## 各ページの説明と今後の更新予定
 - **トップページ**（更新履歴含む）[top.html](BSSD/top.html)
