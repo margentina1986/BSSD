@@ -110,18 +110,18 @@ INSERT INTO m_instrument VALUES(17,'チャイニーズゴング',7);
 INSERT INTO m_instrument VALUES(18,'ギター',7);
 
 /* 楽曲マスタINSERT */
-INSERT INTO m_songs VALUES(1,'LOVE PHANTOM','LOVE PHANTOM');
-INSERT INTO m_songs VALUES(2,'Liar! Liar!','Liar! Liar!');
-INSERT INTO m_songs VALUES(3,'銀の翼で翔べ','Brotherhood');
-INSERT INTO m_songs VALUES(4,'スイマーよ!!','SURVIVE');
-INSERT INTO m_songs VALUES(5,'ultra soul (Alternative Guitar Solo ver.)','GREEN');
-INSERT INTO m_songs VALUES(6,'煌めく人','ELEVEN');
-INSERT INTO m_songs VALUES(7,'Shower','SURVIVE');
-INSERT INTO m_songs VALUES(8,'イルミネーション','FYOP');
-INSERT INTO m_songs VALUES(9,'F・E・A・R','Brotherhood');
-INSERT INTO m_songs VALUES(10,'TOKYO DEVIL','ELEVEN');
-INSERT INTO m_songs VALUES(11,'コブシヲニギレ','ELEVEN');
-INSERT INTO m_songs VALUES(12,'扉','ELEVEN');
+INSERT INTO m_songs VALUES(1,'LOVE PHANTOM','18th Single LOVE PHANTOM');
+INSERT INTO m_songs VALUES(2,'Liar! Liar!','23rd Single Liar! Liar!');
+INSERT INTO m_songs VALUES(3,'銀の翼で翔べ','10th Album Brotherhood');
+INSERT INTO m_songs VALUES(4,'スイマーよ!!','9th Album SURVIVE');
+INSERT INTO m_songs VALUES(5,'ultra soul (Alternative Guitar Solo ver.)','12th Album GREEN');
+INSERT INTO m_songs VALUES(6,'煌めく人','11th Album ELEVEN');
+INSERT INTO m_songs VALUES(7,'Shower','9th Album SURVIVE');
+INSERT INTO m_songs VALUES(8,'イルミネーション','23rd Album FYOP');
+INSERT INTO m_songs VALUES(9,'F・E・A・R','10th Album Brotherhood');
+INSERT INTO m_songs VALUES(10,'TOKYO DEVIL','11th Album ELEVEN');
+INSERT INTO m_songs VALUES(11,'コブシヲニギレ','11th Album ELEVEN');
+INSERT INTO m_songs VALUES(12,'扉','11th Album ELEVEN');
 
 /* 演奏曲マスタINSERT */
 INSERT INTO m_performances VALUES(1,1,6,5);
