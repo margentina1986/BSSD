@@ -12,7 +12,7 @@ $parts = $partStmt->fetchAll(PDO::FETCH_ASSOC);
 $results = [];
 $conditions = $_GET['conditions'] ?? [];
 
-// メンバー選択があるか確認
+// メンバー選択があるか確認（JavaScriptと二重チェック）
 $hasMember = false;
 foreach ($conditions as $cond) {
     if (!empty($cond['member'])) {
@@ -21,6 +21,7 @@ foreach ($conditions as $cond) {
     }
 }
 
+// 楽曲マスタから、重複しないように楽曲情報を取得
 if ($hasMember) {
     $sql = "
     SELECT DISTINCT
@@ -34,7 +35,7 @@ if ($hasMember) {
 
     foreach ($conditions as $cond) {
         if (empty($cond['member'])) continue;
-
+        // この曲に該当するメンバーがいるか確認
         $sql .= "
         AND EXISTS (
             SELECT 1
@@ -44,7 +45,7 @@ if ($hasMember) {
               AND p.member_id = ?
         ";
         $params[] = $cond['member'];
-
+        // 楽器の一致を確認
         if (!empty($cond['instrument'])) {
             $sql .= " AND i.instrument_id = ?";
             $params[] = $cond['instrument'];
@@ -55,7 +56,7 @@ if ($hasMember) {
         }
         $sql .= ")";
     }
-
+    // 曲一覧の取得
     $stmt = $pdo->prepare($sql);
     $stmt->execute($params);
     $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -293,7 +294,7 @@ const savedConditions = <?= json_encode($_GET['conditions'] ?? []) ?>;
       }
     });
 
-    // ===== 送信時チェック =====
+    //  送信時チェック 
     const form = document.querySelector('form');
     form.addEventListener('submit', e => {
       const members = document.querySelectorAll('.member');
