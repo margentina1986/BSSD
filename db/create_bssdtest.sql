@@ -25,6 +25,7 @@ CREATE TABLE m_members
     member_alphabet VARCHAR(100) NOT NULL,
     member_other    VARCHAR(200),
     search_count    INT UNSIGNED NOT NULL,
+    search_count_fixed INT UNSIGNED NOT NULL,
     is_display      TINYINT(1) NOT NULL
 );
 
@@ -69,15 +70,15 @@ CREATE TABLE m_performances
 
 
 /* メンバーマスタINSERT */
-INSERT INTO m_members VALUES(1,'満園庄太郎','みつぞのしょうたろう','ミツゾノショウタロウ','Showtaro Mitsuzono','flow-war',0,1);
-INSERT INTO m_members VALUES(2,'黒瀬蛙一','くろせかいち','クロセカイチ','Kaichi Kurose','flow-war',0,1);
-INSERT INTO m_members VALUES(3,'小野塚晃','おのづかあきら','オノヅカアキラ','Akira Onozuka','DIMENSION',0,1);
-INSERT INTO m_members VALUES(4,'勝田一樹','かつたかずき','カツタカズキ','Kazuki Katsuta','DIMENSION',0,1);
-INSERT INTO m_members VALUES(5,'徳永暁人','とくながあきひと','トクナガアキヒト','Akihito Tokunaga','doa',0,1);
-INSERT INTO m_members VALUES(6,'宇徳敬子','うとくけいこ','ウトクケイコ','Keiko Utoku','Mi-Ke、B.B.クィーンズ',0,1);
-INSERT INTO m_members VALUES(7,'山木秀夫','やまきひでお','ヤマキヒデオ','Hideo Yamaki','SHŌGUN',0,1);
-INSERT INTO m_members VALUES(8,'森朱美','もりあけみ','モリアケミ','Akemi Mori','',0,1);
-INSERT INTO m_members VALUES(9,'明石昌夫','あかしまさお','あかしまさお','Masao Akashi','AMG',0,1);
+INSERT INTO m_members VALUES(1,'満園庄太郎','みつぞのしょうたろう','ミツゾノショウタロウ','Showtaro Mitsuzono','flow-war',0,0,1);
+INSERT INTO m_members VALUES(2,'黒瀬蛙一','くろせかいち','クロセカイチ','Kaichi Kurose','flow-war',0,0,1);
+INSERT INTO m_members VALUES(3,'小野塚晃','おのづかあきら','オノヅカアキラ','Akira Onozuka','DIMENSION',0,0,1);
+INSERT INTO m_members VALUES(4,'勝田一樹','かつたかずき','カツタカズキ','Kazuki Katsuta','DIMENSION',0,0,1);
+INSERT INTO m_members VALUES(5,'徳永暁人','とくながあきひと','トクナガアキヒト','Akihito Tokunaga','doa',0,0,1);
+INSERT INTO m_members VALUES(6,'宇徳敬子','うとくけいこ','ウトクケイコ','Keiko Utoku','Mi-Ke、B.B.クィーンズ',0,0,1);
+INSERT INTO m_members VALUES(7,'山木秀夫','やまきひでお','ヤマキヒデオ','Hideo Yamaki','SHŌGUN',0,0,1);
+INSERT INTO m_members VALUES(8,'森朱美','もりあけみ','モリアケミ','Akemi Mori','',0,0,1);
+INSERT INTO m_members VALUES(9,'明石昌夫','あかしまさお','あかしまさお','Masao Akashi','AMG',0,0,1);
 
 /* 楽器（親）マスタINSERT */
 INSERT INTO m_parts VALUES(1,'ベース');
