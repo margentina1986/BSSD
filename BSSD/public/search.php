@@ -85,6 +85,7 @@ if ($hasMember) {
 <title>Search</title>
 <link rel="stylesheet" href="./styles/common.css">
 <link rel="stylesheet" href="./styles/search.css">
+<link rel="stylesheet" href="./styles/footer.css">
 </head>
 
 <script>
@@ -136,8 +137,8 @@ const savedConditions = <?= json_encode($_GET['conditions'] ?? []) ?>;
     <hr>
     <h2>検索結果</h2>
     <?php if (empty($results)): ?>
-      <!-- 文法的には誤りだが、
-       <p>で囲んだむと何故かfooterに含まれてしまうバグを解消できなかったので<h3> -->
+      <!-- 文法的には誤りだが、<p>で囲んだむと何故かfooterに含まれてしまったり
+        フッターの<p>がsearch.cssの<p>を読み込むバグを解消できなかったので<h3> -->
     <h3>該当する楽曲はありません</h3>
     <?php else: ?>
     <?php foreach ($results as $row): ?>
