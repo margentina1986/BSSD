@@ -6,13 +6,21 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['csv_file'])) {
     // テーブル名を POST に追加
     $_POST['table'] = $_POST['table'] ?? '';
     
-    // public 外の import_csv.php を呼ぶ
+    // public 外の import_csv.phpを呼ぶ
     include __DIR__ . '/../csv/import_csv.php';
     
     // import_csv.php 側で JSON を echo しているのでここで終了
     exit;
 }
+    // 同様にexport_csv.phpを呼ぶ
+if (isset($_GET['export']) && $_GET['export'] === '1') {
+    include __DIR__ . '/../csv/export_csv.php';
+    exit;
+}
+
 ?>
+
+
 
 <!doctype html>
 <html lang="ja">
@@ -96,10 +104,24 @@ document.getElementById('runBtn').addEventListener('click', function() {
 });
 
 // CSV ダウンロード
-document.getElementById('exportBtn').addEventListener('click', function() {
+document.getElementById('exportBtn').addEventListener('click', async function() {
     if (!confirm('データベースからCSVをダウンロードしますか？')) return;
-    window.location.href = '../download_csv.php';
+
+    const tableSelect = document.querySelector('select[name="job"]');
+    const tableName = tableSelect.value;
+
+    const url = `Admin.php?export=1&table=${tableName}`;
+    const response = await fetch(url);
+    if (!response.ok) return alert('CSV取得に失敗しました');
+
+    const blob = await response.blob();
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = `${tableName}.csv`;
+    a.click();
+    URL.revokeObjectURL(a.href);
 });
+
 </script>
 
 <h2>個別処理</h2>
