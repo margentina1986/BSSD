@@ -15,7 +15,6 @@ h2 {
     text-shadow: 1px 1px 2px rgba(255, 0, 0, 0.7);
     margin-top: 0;
     /* 上の余白を消す */
-
 }
 
 h3 {
@@ -24,8 +23,26 @@ h3 {
     text-align: center;
     text-shadow: 1px 1px 2px rgba(255, 0, 0, 0.7);
     margin-top: 0;
+    margin-bottom: 0;
     /* 上の余白を消す */
+}
 
+h4 {
+    color: rgb(255, 55, 0);
+    font-size: clamp(10px, 2.5vw, 18px);
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(255, 0, 0, 0.7);
+    margin-top: 0;
+    /* 上の余白を消す */
+}
+
+h5 {
+    color: rgb(255, 55, 0);
+    font-size: clamp(14px, 2.5vw, 22px);
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(255, 0, 0, 0.7);
+    margin-top: 0;
+    /* 上の余白を消す */
 }
 
 p {
