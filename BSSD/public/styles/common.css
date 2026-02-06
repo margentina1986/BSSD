@@ -1,5 +1,5 @@
 body {
-  background: linear-gradient(135deg, #3F2B72 0%, #2E1A47 100%);
+  background-color: #411f5f;
   /* FYOP意識しつつ、トップページの画像背景色に合わせる */
   padding-top: 60px; /* メニューの高さに合わせて */
   margin: 0;
@@ -14,7 +14,7 @@ nav {
   width: 100%;
   border-bottom: 1px solid #ccc;
   z-index: 1000;
-  background: linear-gradient(135deg, #3F2B72 0%, #2E1A47 100%);
+  background-color: #411f5f;
   /* FYOP意識しつつ、トップページの画像背景色に合わせる */
 }
 
@@ -36,6 +36,3 @@ nav ul li a {
   font-weight: bold;
 }
 
-body {
-  padding-top: 60px;
-}
