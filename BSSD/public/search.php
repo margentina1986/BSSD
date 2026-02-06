@@ -135,15 +135,16 @@ const savedConditions = <?= json_encode($_GET['conditions'] ?? []) ?>;
 
     <?php if (!empty($_GET)): ?>
     <hr>
-    <h2>検索結果</h2>
+    <h3>検索結果</h3>
+    <h4>曲名（初回収録作品）</h4>
     <?php if (empty($results)): ?>
       <!-- 文法的には誤りだが、<p>で囲んだむと何故かfooterに含まれてしまったり
-        フッターの<p>がsearch.cssの<p>を読み込むバグを解消できなかったので<h3> -->
-    <h3>該当する楽曲はありません</h3>
+        フッターの<p>がsearch.cssの<p>を読み込むバグを解消できなかったので<h5> -->
+    <h5>該当する楽曲はありません</h5>
     <?php else: ?>
     <?php foreach ($results as $row): ?>
     <div class="song">
-      <h3><strong><?= htmlspecialchars($row['song_name']) ?></strong>（<?= htmlspecialchars($row['work_title']) ?>）</h3>
+      <h5><strong><?= htmlspecialchars($row['song_name']) ?></strong>（<?= htmlspecialchars($row['work_title']) ?>）</h5>
     </div>
     <?php endforeach; ?>
     <?php endif; ?>
