@@ -103,7 +103,7 @@ document.getElementById('exportBtn').addEventListener('click', function() {
 </script>
 
 <h2>個別処理</h2>
-<select name="job"><!--処理するテーブルをプルダウンで選択-->
+<select name="processing"><!--処理するテーブルをプルダウンで選択-->
     <option value="m_songs">楽曲マスタ</option>
     <option value="m_members">メンバーマスタ</option>
     <option value="m_parts">担当パートマスタ</option>
