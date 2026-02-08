@@ -176,7 +176,7 @@ const savedConditions = <?= json_encode($_GET['conditions'] ?? []) ?>;
         instrument.innerHTML = '<option value="">-- 楽器 --</option>';
         member.innerHTML = '<option value="">-- メンバー --</option>';
         if (!partId) return;
-        fetch('/ajax/ajax_instrument.php?part_id=' + partId)
+        fetch('./ajax/ajax_instrument.php?part_id=' + partId)
         .then(res => res.text())
         .then(html => {
           instrument.innerHTML += html;
@@ -205,7 +205,7 @@ const savedConditions = <?= json_encode($_GET['conditions'] ?? []) ?>;
       member.innerHTML = '<option value="">-- メンバー --</option>';
       if (!instrumentId) return;
 
-      fetch('/ajax/ajax_member.php?instrument_id=' + instrumentId)
+      fetch('./ajax/ajax_member.php?instrument_id=' + instrumentId)
         .then(res => res.text())
         .then(html => {
           const tmpDiv = document.createElement('div');
@@ -276,7 +276,7 @@ const savedConditions = <?= json_encode($_GET['conditions'] ?? []) ?>;
           el.querySelector('.part').value = cond.part;
 
           // 楽器取得
-          const instrumentRes = await fetch('/ajax/ajax_instrument.php?part_id=' + cond.part);
+          const instrumentRes = await fetch('./ajax/ajax_instrument.php?part_id=' + cond.part);
           el.querySelector('.instrument').innerHTML += await instrumentRes.text();
         }
 
@@ -285,7 +285,7 @@ const savedConditions = <?= json_encode($_GET['conditions'] ?? []) ?>;
           el.querySelector('.instrument').value = cond.instrument;
 
           // メンバー取得
-          const memberRes = await fetch('/ajax/ajax_member.php?instrument_id=' + cond.instrument);
+          const memberRes = await fetch('./ajax/ajax_member.php?instrument_id=' + cond.instrument);
           el.querySelector('.member').innerHTML += await memberRes.text();
         }
 

@@ -2,9 +2,11 @@
 // config 読み込み
 require __DIR__ . '/../config/db_connect.php';
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['csv_file'])) {
-    // テーブル名を POST に追加
-    $_POST['table'] = $_POST['table'] ?? '';
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    if (!isset($_FILES['csv_file'])) {
+        echo json_encode(['success' => false, 'error' => 'ファイルが送信されていません']);
+        exit;
+    }
     
     // public 外の import_csv.phpを呼ぶ
     include __DIR__ . '/../csv/import_csv.php';
