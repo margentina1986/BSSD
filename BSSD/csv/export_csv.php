@@ -1,4 +1,10 @@
 <?php
+ini_set('display_errors', 0);
+error_reporting(E_ALL);
+
+header('Content-Type: text/csv; charset=UTF-8');
+header('Content-Disposition: attachment; filename="export.csv"');
+
 require __DIR__ . '/../config/db_connect.php';
 
 $table = $_GET['table'] ?? '';
