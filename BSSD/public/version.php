@@ -15,8 +15,7 @@ foreach ($rows as $row) {
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <title>Version</title>
-    <link href="styles/common.css" rel="stylesheet" />
-    <link href="styles/qa.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles/common.css">
     <link rel="stylesheet" href="./styles/version.css">
     <link rel="stylesheet" href="./styles/footer.css">
 </head>
