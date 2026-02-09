@@ -1,6 +1,6 @@
 <?php
 // config 読み込み
-require __DIR__ . '/../config/db_connect.php';
+require __DIR__ . '/../../config/db_connect.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (!isset($_FILES['csv_file'])) {
@@ -76,8 +76,8 @@ document.getElementById('importBtn').addEventListener('click', function() {
 
 // CSV 取込処理
 document.getElementById('runBtn').addEventListener('click', function() {
-    const tableSelect = document.querySelector('select[name="job"]');
-    const tableName = tableSelect.value;
+    const jobSelect = document.querySelector('select[name="job"]');
+    const tableName = jobSelect.value;
 
     if (!selectedFile) {
         alert('ファイルが選択されていません');
@@ -109,8 +109,8 @@ document.getElementById('runBtn').addEventListener('click', function() {
 document.getElementById('exportBtn').addEventListener('click', async function() {
     if (!confirm('データベースからCSVをダウンロードしますか？')) return;
 
-    const tableSelect = document.querySelector('select[name="job"]');
-    const tableName = tableSelect.value;
+    const jobSelect = document.querySelector('select[name="job"]');
+    const tableName = jobSelect.value;
 
     const url = `Admin.php?export=1&table=${tableName}`;
     const response = await fetch(url);
@@ -135,12 +135,30 @@ document.getElementById('exportBtn').addEventListener('click', async function() 
     <option value="m_performances">演奏曲マスタ</option>
 </select>
 
-<div class="btn-group"><!--選択されたテーブルのCRUDへ遷移　後ほどJavaScriptを作成-->
-    <button type="button" onclick="location.href='遷移先URL'">一覧</button>
-    <button type="button" onclick="location.href='遷移先URL'">追加</button>
-    <button type="button" onclick="location.href='遷移先URL'">更新</button>
-    <button type="button" onclick="location.href='遷移先URL'">削除</button>
+<div class="btn-group">
+    <button type="button" id="listBtn">一覧表示</button>
 </div>
+
+<script>
+const processingSelect = document.querySelector('select[name="processing"]');
+
+function updateLinks() {
+    const table = processingSelect.value; // 選択されたテーブル名を取得
+
+    // m_performancesテーブルだけ遷移先が別ファイルでクエリ付き
+    if (table === 'm_performances') {
+        document.getElementById('listBtn').onclick = () => 
+            location.href = `performances_list.php?table=m_performances`;
+    } else {
+        document.getElementById('listBtn').onclick = () => 
+            location.href = `list.php?table=${table}`;
+    }
+}
+
+// ページロード時とセレクト変更時にリンク更新
+updateLinks();
+processingSelect.addEventListener('change', updateLinks);
+</script>
 
 </body>
 </html>
