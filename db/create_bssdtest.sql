@@ -18,7 +18,7 @@ USE bssdtest;
 /* メンバーマスタ作成 */
 CREATE TABLE m_members
 (
-    member_id       INT PRIMARY KEY,
+    member_id       INT PRIMARY KEY AUTO_INCREMENT,
     member_name     VARCHAR(100) NOT NULL,
     member_hiragana VARCHAR(100) NOT NULL,
     member_katakana VARCHAR(100) NOT NULL,
@@ -33,7 +33,7 @@ CREATE TABLE m_members
 /* 楽器（親）マスタ作成 */
 CREATE TABLE m_parts
 (
-    part_id   INT PRIMARY KEY NOT NULL,
+    part_id   INT PRIMARY KEY AUTO_INCREMENT,
     part_name VARCHAR(100) NOT NULL
 );
 
@@ -41,7 +41,7 @@ CREATE TABLE m_parts
 /* 楽器（子）マスタ作成 */
 CREATE TABLE m_instrument
 (
-    instrument_id   INT PRIMARY KEY NOT NULL,
+    instrument_id   INT PRIMARY KEY AUTO_INCREMENT,
     instrument_name VARCHAR(100) NOT NULL,
     part_id         INT NOT NULL,
     FOREIGN KEY (part_id) REFERENCES m_parts(part_id)
@@ -50,7 +50,7 @@ CREATE TABLE m_instrument
 /* 楽曲マスタ作成 */
 CREATE TABLE m_songs
 (
-	song_id INT PRIMARY KEY,
+	song_id INT PRIMARY KEY AUTO_INCREMENT,
 	song_name varchar(100)NOT NULL,
 	work_title varchar(100)NOT NULL
 );
@@ -59,7 +59,7 @@ CREATE TABLE m_songs
 /*演奏曲マスタ作成 */
 CREATE TABLE m_performances
 (
-    performances_id  INT PRIMARY KEY NOT NULL,
+    performance_id  INT PRIMARY KEY AUTO_INCREMENT,
     song_id         INT NOT NULL,
     member_id	INT NOT NULL,
     instrument_id	INT NOT NULL,
@@ -96,7 +96,7 @@ INSERT INTO m_instrument VALUES(3,'キーボード',3);
 INSERT INTO m_instrument VALUES(4,'コーラス',4);
 INSERT INTO m_instrument VALUES(5,'ボイス',4);
 INSERT INTO m_instrument VALUES(6,'オペラ',4);
-INSERT INTO m_instrument VALUES(7,'サキソフォン',5);
+INSERT INTO m_instrument VALUES(7,'サックス',5);
 INSERT INTO m_instrument VALUES(8,'トランペット',5);
 INSERT INTO m_instrument VALUES(9,'トロンボーン',5);
 INSERT INTO m_instrument VALUES(10,'ヴァイオリン',6);
@@ -110,18 +110,18 @@ INSERT INTO m_instrument VALUES(17,'チャイニーズゴング',7);
 INSERT INTO m_instrument VALUES(18,'ギター',7);
 
 /* 楽曲マスタINSERT */
-INSERT INTO m_songs VALUES(1,'LOVE PHANTOM','18th Single LOVE PHANTOM');
-INSERT INTO m_songs VALUES(2,'Liar! Liar!','23rd Single Liar! Liar!');
-INSERT INTO m_songs VALUES(3,'銀の翼で翔べ','10th Album Brotherhood');
-INSERT INTO m_songs VALUES(4,'スイマーよ!!','9th Album SURVIVE');
-INSERT INTO m_songs VALUES(5,'ultra soul (Alternative Guitar Solo ver.)','12th Album GREEN');
-INSERT INTO m_songs VALUES(6,'煌めく人','11th Album ELEVEN');
-INSERT INTO m_songs VALUES(7,'Shower','9th Album SURVIVE');
-INSERT INTO m_songs VALUES(8,'イルミネーション','23rd Album FYOP');
-INSERT INTO m_songs VALUES(9,'F・E・A・R','10th Album Brotherhood');
-INSERT INTO m_songs VALUES(10,'TOKYO DEVIL','11th Album ELEVEN');
-INSERT INTO m_songs VALUES(11,'コブシヲニギレ','11th Album ELEVEN');
-INSERT INTO m_songs VALUES(12,'扉','11th Album ELEVEN');
+INSERT INTO m_songs VALUES(1,'LOVE PHANTOM','18th Single　LOVE PHANTOM');
+INSERT INTO m_songs VALUES(2,'Liar! Liar!','23rd Single　Liar! Liar!');
+INSERT INTO m_songs VALUES(3,'銀の翼で翔べ','10th Album　Brotherhood');
+INSERT INTO m_songs VALUES(4,'スイマーよ!!','9th Album　SURVIVE');
+INSERT INTO m_songs VALUES(5,'ultra soul (Alternative Guitar Solo ver.)','12th Album　GREEN');
+INSERT INTO m_songs VALUES(6,'煌めく人','11th Album　ELEVEN');
+INSERT INTO m_songs VALUES(7,'Shower','9th Album　SURVIVE');
+INSERT INTO m_songs VALUES(8,'イルミネーション','23rd Album　FYOP');
+INSERT INTO m_songs VALUES(9,'F・E・A・R','10th Album　Brotherhood');
+INSERT INTO m_songs VALUES(10,'TOKYO DEVIL','11th Album　ELEVEN');
+INSERT INTO m_songs VALUES(11,'コブシヲニギレ','11th Album　ELEVEN');
+INSERT INTO m_songs VALUES(12,'扉','11th Album　ELEVEN');
 
 /* 演奏曲マスタINSERT */
 INSERT INTO m_performances VALUES(1,1,6,5);
@@ -131,7 +131,7 @@ INSERT INTO m_performances VALUES(4,3,1,1);
 INSERT INTO m_performances VALUES(5,3,2,2);
 INSERT INTO m_performances VALUES(6,3,4,7);
 INSERT INTO m_performances VALUES(7,4,5,1);
-INSERT INTO m_performances VALUES(8,4,7,1);
+INSERT INTO m_performances VALUES(8,4,7,2);
 INSERT INTO m_performances VALUES(9,5,5,1);
 INSERT INTO m_performances VALUES(10,6,9,1);
 INSERT INTO m_performances VALUES(11,6,2,2);
