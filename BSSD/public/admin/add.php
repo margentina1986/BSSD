@@ -15,7 +15,7 @@ $primaryKeys = [
     'm_members'      => 'member_id',
     'm_parts'        => 'part_id',
     'm_instrument'   => 'instrument_id',
-    'm_performances' => 'performances_id',
+    'm_performances' => 'performance_id',
 ];
 
 // 次のIDを取得（表示用）
