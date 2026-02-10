@@ -7,7 +7,7 @@ const menuItems = [
     { name: "Ranking", link: "/ranking.php" },
     { name: "Q & A", link: "/qa.php" },
     { name: "Version", link: "/version.php" },
-    { name: "Contact", link: "/contact.php" }
+    { name: "Contact", link: "/contact.html" }
 ];
 
 // nav要素を取得
