@@ -23,7 +23,7 @@ $pkMap = [
     'm_members'      => 'member_id',
     'm_parts'        => 'part_id',
     'm_instrument'   => 'instrument_id',
-    'm_performances' => 'performances_id'
+    'm_performances' => 'performance_id'
 ];
 $pk = $pkMap[$table];
 
@@ -129,7 +129,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $stmt = $pdo->prepare("
                     UPDATE m_performances
                     SET song_id = ?, member_id = ?, instrument_id = ?
-                    WHERE performances_id = ?
+                    WHERE performance_id = ?
                 ");
                 $stmt->execute([$song_id, $member_id, $instrument_id, $id]);
                 break;

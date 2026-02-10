@@ -16,7 +16,7 @@ $pkMap = [
     'm_members'      => 'member_id',
     'm_parts'        => 'part_id',
     'm_instrument'   => 'instrument_id',
-    'm_performances' => 'performances_id'
+    'm_performances' => 'performance_id'
 ];
 $pk = $pkMap[$table];
 
