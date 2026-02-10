@@ -35,8 +35,8 @@ $tables = [
         'columns' => ['instrument_id','instrument_name','part_id']
     ],
     'm_performances' => [
-        'pk' => 'performances_id',
-        'columns' => ['performances_id','song_id','member_id','instrument_id']
+        'pk' => 'performance_id',
+        'columns' => ['performance_id','song_id','member_id','instrument_id']
     ],
 ];
 
