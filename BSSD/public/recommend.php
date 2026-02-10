@@ -78,6 +78,7 @@ if (!empty($_POST['birthday'])) {
     <title>Recommend</title>
     <link rel="stylesheet" href="styles/common.css">
     <link rel="stylesheet" href="styles/recommend.css">
+    <link rel="stylesheet" href="./styles/footer.css">
 </head>
 
 <body>
@@ -131,5 +132,6 @@ if (!empty($_POST['birthday'])) {
 <?php endif; ?>
 
 <script src="scripts/menu.js"></script>
+<?php include 'parts/footer.php'; ?>
 </body>
 </html>
