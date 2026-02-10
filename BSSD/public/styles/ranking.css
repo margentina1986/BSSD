@@ -32,3 +32,65 @@ p {
     background-color: rgba(255, 255, 255, 0.1)
         /* 少し透過*/
 }
+
+/* 横並び用の親コンテナ */
+.ranking-wrap {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap; /* 狭い画面では縦並びに */
+}
+
+/* ランキングボックス */
+.ranking-box {
+    width: 480px;   /* 100%じゃなく固定幅に */
+    margin-bottom: 2rem;
+    border-collapse: collapse;
+    color: whitesmoke;
+}
+
+/* テーブル内要素 */
+.ranking-box th,
+.ranking-box td {
+    border: 1px solid whitesmoke;
+    padding: 8px;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.ranking-box th {
+    background-color: rgb(255, 77, 0);
+    color: whitesmoke;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.ranking-box tr:nth-child(even) {
+    background-color: #533269;
+}
+
+.ranking-box tr:nth-child(odd) {
+    background-color: #411f5f;
+}
+
+.rank-gold td  {
+  color: #FFD700; /* 金 */
+  font-weight: bold;
+}
+
+.rank-silver td {
+  color: #F5F5F5; /* 明るめシルバー */
+  font-weight: bold;
+}
+
+.rank-bronze td {
+  color: #CD7F32; /* ブロンズ */
+  font-weight: bold;
+}
+.rank-gold td:nth-child(2),
+.rank-silver td:nth-child(2),
+.rank-bronze td:nth-child(2) {
+    font-size: 1.1rem; /* 名前だけ文字サイズを大きく */
+}
+
