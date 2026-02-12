@@ -7,8 +7,8 @@ $rows = require __DIR__ . '/../data/qa_list.php';
 <html lang="ja">
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>Version</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q & A</title>
     <link rel="stylesheet" href="./styles/common.css">
     <link rel="stylesheet" href="./styles/qa.css">
     <link rel="stylesheet" href="./styles/footer.css">
