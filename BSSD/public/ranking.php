@@ -113,7 +113,7 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
 
             </tbody>
         </table>
-        <p>・明石さんと徳永さんはもっと弾いてるイメージだったけど<br>　打ち込みが多いので演奏した曲数は伸びず。<br>・明石さんのコーラスはクレジットされてるだけで<br>　実際には歌ってない曲があるので水増しされてますね。<br>・2021年から参加の種子田さんが早くもランクイン。</p>
+        <p class="content-text">・明石さんと徳永さんはもっと弾いてるイメージだったけど<br>　打ち込みが多いので演奏した曲数は伸びず。<br>・明石さんのコーラスはクレジットされてるだけで<br>　実際には歌ってない曲があるので水増しされてますね。<br>・2021年から参加の種子田さんが早くもランクイン。</p>
     </section>
 
     <!-- 累計検索回数ランキング -->
@@ -151,9 +151,7 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
     </section>
 
 </div>
-
-<script src="scripts/menu.js"></script>
-<?php include 'parts/footer.php'; ?>
-
+    <script src="scripts/menu.js"></script>
+    <?php include 'parts/footer.php'; ?>
 </body>
 </html>
