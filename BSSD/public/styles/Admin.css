@@ -1,8 +1,11 @@
-.btn-group {
-    display: flex;
-    gap: 16px;   /* ボタン同士の間隔 */
-    margin-bottom: 16px; /* グループ同士の間隔 */
+@media screen and (max-width: 480px) {
+    .btn-group {
+        flex-direction: column;
+        gap: 8px;
+    }
 }
+
 select {
+    width: 100%;
     margin-bottom: 12px;
 }
