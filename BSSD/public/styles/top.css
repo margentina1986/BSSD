@@ -60,7 +60,7 @@ h4 {
     /* 下の余白を消す */
 }
 
-p {
+.content-text {
     color: whitesmoke;
     max-width: 500px;
     width: 50%;
