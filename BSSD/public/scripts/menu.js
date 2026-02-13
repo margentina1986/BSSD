@@ -1,13 +1,13 @@
 // メニュー項目を配列で定義
 const menuItems = [
-    { name: "Top", link: "/top.php" },
-    { name: "About This", link: "/about.php" },
-    { name: "Search", link: "/search.php" },
-    { name: "Recommend", link: "/recommend.php" },
-    { name: "Ranking", link: "/ranking.php" },
-    { name: "Q & A", link: "/qa.php" },
-    { name: "Version", link: "/version.php" },
-    { name: "Contact", link: "/contact.php" }
+    { name: "Top", link: "top.php" },
+    { name: "About This", link: "about.php" },
+    { name: "Search", link: "search.php" },
+    { name: "Recommend", link: "recommend.php" },
+    { name: "Ranking", link: "ranking.php" },
+    { name: "Q & A", link: "qa.php" },
+    { name: "Version", link: "version.php" },
+    { name: "Contact", link: "contact.php" }
 ];
 
 // nav要素を取得
