@@ -115,6 +115,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 if ($_SERVER['REQUEST_METHOD'] === 'GET') {
     $results = $_SESSION['last_search_results'] ?? [];
     $conditions = $_SESSION['last_search_conditions'] ?? [];
+    // 表示したら結果を破棄
+    unset($_SESSION['last_search_results']);
+    unset($_SESSION['last_search_conditions']);
 }
 ?>
 
@@ -192,44 +195,48 @@ return pairs;
 }
 
 document.addEventListener('change', function(e) {
-if (e.target.classList.contains('part')) {
-const partId = e.target.value;
-const instrument = e.target.closest('.condition').querySelector('.instrument');
-const member = e.target.closest('.condition').querySelector('.member');
-instrument.innerHTML = '<option value="">-- 楽器 --</option>';
-member.innerHTML = '<option value="">-- メンバー --</option>';
-if (!partId) return;
-fetch('./ajax/ajax_instrument.php?part_id=' + partId)
-.then(res => res.text())
-.then(html => {
-instrument.innerHTML += html;
-const options = instrument.querySelectorAll('option:not([value=""])');
-if (options.length === 1) {
-instrument.value = options[0].value;
-setTimeout(() => {
-instrument.dispatchEvent(new Event('change', { bubbles: true }));
-}, 0);
-}
-});
-}
-if (e.target.classList.contains('instrument')) {
-const instrumentId = e.target.value;
-const cond = e.target.closest('.condition');
-const member = cond.querySelector('.member');
-member.innerHTML = '<option value="">-- メンバー --</option>';
-if (!instrumentId) return;
-fetch('./ajax/ajax_member.php?instrument_id=' + instrumentId)
-.then(res => res.text())
-.then(html => {
-const tmpDiv = document.createElement('div');
-tmpDiv.innerHTML = html;
-const selectedPairs = getSelectedPairs();
-Array.from(tmpDiv.children).forEach(option => {
-const pairKey = instrumentId + '_' + option.value;
-if (!selectedPairs.includes(pairKey)) member.appendChild(option);
-});
-});
-}
+    if (e.target.classList.contains('part')) {
+        const partId = e.target.value;
+        const instrument = e.target.closest('.condition').querySelector('.instrument');
+        const member = e.target.closest('.condition').querySelector('.member');
+
+        instrument.innerHTML = '<option value="">-- 楽器 --</option>';
+        member.innerHTML = '<option value="">-- メンバー --</option>';
+        if (!partId) return;
+
+        fetch('./ajax/ajax_instrument.php?part_id=' + partId)
+            .then(res => res.text())
+            .then(html => {
+                instrument.innerHTML += html;
+                const options = instrument.querySelectorAll('option:not([value=""])');
+                if (options.length === 1) {
+                    instrument.value = options[0].value;
+                    setTimeout(() => {
+                        instrument.dispatchEvent(new Event('change', { bubbles: true }));
+                    }, 0);
+                }
+            });
+    }
+    // instrument が変更された場合
+    if (e.target.classList.contains('instrument')) {
+        const instrumentId = e.target.value;
+        const cond = e.target.closest('.condition');
+        const member = cond.querySelector('.member');
+        member.innerHTML = '<option value="">-- メンバー --</option>';
+        if (!instrumentId) return;
+
+        fetch('./ajax/ajax_member.php?instrument_id=' + instrumentId)
+            .then(res => res.text())
+            .then(html => {
+                const tmpDiv = document.createElement('div');
+                tmpDiv.innerHTML = html;
+                const selectedPairs = getSelectedPairs();
+                Array.from(tmpDiv.children).forEach(option => {
+                    const pairKey = instrumentId + '_' + option.value;
+                    if (!selectedPairs.includes(pairKey)) member.appendChild(option);
+                });
+            });
+    }
 });
 
 let index = 1;
@@ -237,58 +244,71 @@ const max = 5;
 const conditionsContainer = document.getElementById('conditions');
 
 document.getElementById('addCondition').addEventListener('click', () => {
-if (index >= max) return alert(`検索は最大${max}人までです`);
-const base = document.querySelector('.condition');
-const clone = base.cloneNode(true);
-clone.querySelectorAll('select').forEach(select => {
-select.name = select.name.replace(/\[\d+\]/, `[${index}]`);
-if (!select.classList.contains('part')) {
-const first = select.options[0].cloneNode(true);
-select.innerHTML = '';
-select.appendChild(first);
-select.selectedIndex = 0;
-}
-});
-conditionsContainer.appendChild(clone);
-index++;
+    if (index >= max) return alert(`検索は最大${max}人までです`);
+    
+    const base = document.querySelector('.condition');
+    const clone = base.cloneNode(true);
+
+    clone.querySelectorAll('select').forEach(select => {
+        select.name = select.name.replace(/\[\d+\]/, `[${index}]`);
+        if (!select.classList.contains('part')) {
+            const first = select.options[0].cloneNode(true);
+            select.innerHTML = '';
+            select.appendChild(first);
+            select.selectedIndex = 0;
+        }
+    });
+
+    conditionsContainer.appendChild(clone);
+    index++;
 });
 
 document.getElementById('removeCondition').addEventListener('click', () => {
-const conditions = document.querySelectorAll('#conditions .condition');
-if (conditions.length <= 1) return alert('検索には最低1人は必要です');
-conditions[conditions.length - 1].remove();
-index--;
+    const conditions = document.querySelectorAll('#conditions .condition');
+    if (conditions.length <= 1) return alert('検索には最低1人は必要です');
+    conditions[conditions.length - 1].remove();
+    index--;
 });
 
 document.addEventListener('DOMContentLoaded', async () => {
-if (!savedConditions.length) return;
-for (let i = 1; i < savedConditions.length; i++) document.getElementById('addCondition').click();
-const conditionEls = document.querySelectorAll('.condition');
-for (let i = 0; i < savedConditions.length; i++) {
-const cond = savedConditions[i];
-const el = conditionEls[i];
-if (cond.part) {
-el.querySelector('.part').value = cond.part;
-const instrumentRes = await fetch('./ajax/ajax_instrument.php?part_id=' + cond.part);
-el.querySelector('.instrument').innerHTML += await instrumentRes.text();
-}
-if (cond.instrument) {
-el.querySelector('.instrument').value = cond.instrument;
-const memberRes = await fetch('./ajax/ajax_member.php?instrument_id=' + cond.instrument);
-el.querySelector('.member').innerHTML += await memberRes.text();
-}
-if (cond.member) el.querySelector('.member').value = cond.member;
-}
+    if (!savedConditions.length) return;
+
+    for (let i = 1; i < savedConditions.length; i++) {
+        document.getElementById('addCondition').click();
+    }
+
+    const conditionEls = document.querySelectorAll('.condition');
+
+    for (let i = 0; i < savedConditions.length; i++) {
+        const cond = savedConditions[i];
+        const el = conditionEls[i];
+
+        if (cond.part) {
+            el.querySelector('.part').value = cond.part;
+            const instrumentRes = await fetch('./ajax/ajax_instrument.php?part_id=' + cond.part);
+            el.querySelector('.instrument').innerHTML += await instrumentRes.text();
+        }
+
+        if (cond.instrument) {
+            el.querySelector('.instrument').value = cond.instrument;
+            const memberRes = await fetch('./ajax/ajax_member.php?instrument_id=' + cond.instrument);
+            el.querySelector('.member').innerHTML += await memberRes.text();
+        }
+
+        if (cond.member) {
+            el.querySelector('.member').value = cond.member;
+        }
+    }
 });
 
 const form = document.querySelector('form');
 form.addEventListener('submit', e => {
-const members = document.querySelectorAll('.member');
-const hasMember = [...members].some(m => m.value !== '');
-if (!hasMember) {
-alert('最低1人はメンバーを選択してください');
-e.preventDefault();
-}
+    const members = document.querySelectorAll('.member');
+    const hasMember = [...members].some(m => m.value !== '');
+    if (!hasMember) {
+        alert('最低1人はメンバーを選択してください');
+        e.preventDefault();
+    }
 });
 </script>
 
