@@ -183,7 +183,6 @@ const savedConditions = <?= json_encode($conditions) ?>;
 <?php endif; ?>
 
 <script>
-// ここからは前回のJavaScriptそのまま
 function getSelectedPairs() {
 const pairs = [];
 document.querySelectorAll('.condition').forEach(cond => {
@@ -317,3 +316,4 @@ form.addEventListener('submit', e => {
 <?php include 'parts/footer.php'; ?>
 </body>
 </html>
+
