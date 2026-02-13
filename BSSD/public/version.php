@@ -33,7 +33,7 @@ foreach ($rows as $row) {
                     <th>曲名</th>
                     <th>バージョン</th>
                     <th>初回収録作品</th>
-                    <th>違い</th>
+                    <!-- <th>違い</th> -->
                     <th>当HPでの取り扱い</th>
                     <th>備考</th>
                 </tr>
@@ -51,7 +51,7 @@ foreach ($rows as $row) {
 
                             <td><?= nl2br(htmlspecialchars($song['version'], ENT_QUOTES, 'UTF-8')) ?></td>
                             <td><?= nl2br(htmlspecialchars($song['first_work'], ENT_QUOTES, 'UTF-8')) ?></td>
-                            <td><?= nl2br(htmlspecialchars($song['difference'], ENT_QUOTES, 'UTF-8')) ?></td>
+                            <!-- <td><?= nl2br(htmlspecialchars($song['difference'], ENT_QUOTES, 'UTF-8')) ?></td>-->
                             <td><?= nl2br(htmlspecialchars($song['policy'], ENT_QUOTES, 'UTF-8')) ?></td>
                             <td><?= nl2br(htmlspecialchars($song['note'], ENT_QUOTES, 'UTF-8')) ?></td>
                         </tr>
