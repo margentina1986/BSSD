@@ -1,5 +1,5 @@
 <?php
-require __DIR__ . '/../config/db_connect.php';// DBへ接続
+require __DIR__ . '/../config/db_connect.php'; // DB接続
 
 $recommendedMember = null;
 $partsText = null;
@@ -32,12 +32,17 @@ if (!empty($_POST['birthday'])) {
             // 日替わり固定のインデックス
             $offset = $seed % $memberCount;
 
-            // オススメメンバー取得
+            // 演奏曲数が多いメンバーを優先してオススメ
             $stmt = $pdo->prepare("
-                SELECT member_id, member_name, member_other
-                FROM m_members
-                WHERE is_display = 1
-                ORDER BY member_id
+                SELECT m.member_id, m.member_name, m.member_other, performance_count
+                FROM m_members m
+                LEFT JOIN (
+                    SELECT member_id, COUNT(*) AS performance_count
+                    FROM m_performances
+                    GROUP BY member_id
+                ) AS performance_counts ON m.member_id = performance_counts.member_id
+                WHERE m.is_display = 1 AND performance_count > 0
+                ORDER BY performance_count DESC, m.member_id
                 LIMIT 1 OFFSET :offset
             ");
             $stmt->bindValue(':offset', $offset, PDO::PARAM_INT);
@@ -62,13 +67,15 @@ if (!empty($_POST['birthday'])) {
                 $partStmt->execute();
 
                 $instruments = $partStmt->fetchAll(PDO::FETCH_COLUMN);
-                $partsText = implode(' / ', $instruments); // 変数名はそのまま使える
+                $partsText = implode(' / ', $instruments); 
             }
 
         }
     }
 }
 ?>
+
+
 <!doctype html>
 <html lang="ja">
 
