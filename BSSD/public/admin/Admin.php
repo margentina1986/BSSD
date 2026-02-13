@@ -1,4 +1,12 @@
 <?php
+// セッション開始
+session_start();
+
+// ログインしていなければログインページにリダイレクト
+if (!isset($_SESSION['user_id'])) {
+    header('Location: /private/login.php');
+    exit;
+}
 // config 読み込み
 require __DIR__ . '/../../config/db_connect.php';
 
@@ -9,14 +17,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
     
     // public 外の import_csv.phpを呼ぶ
-    include __DIR__ . '/../csv/import_csv.php';
+    include __DIR__ . '/../../csv/import_csv.php';
     
     // import_csv.php 側で JSON を echo しているのでここで終了
     exit;
 }
     // 同様にexport_csv.phpを呼ぶ
 if (isset($_GET['export']) && $_GET['export'] === '1') {
-    include __DIR__ . '/../csv/export_csv.php';
+    include __DIR__ . '/../../csv/export_csv.php';
     exit;
 }
 
@@ -35,6 +43,11 @@ if (isset($_GET['export']) && $_GET['export'] === '1') {
 <body>
 
 <h1>管理画面</h1>
+
+<!-- ログアウトボタン -->
+<div class="btn-group">
+    <a href="/private/logout.php" class="btn btn-logout">ログアウト</a>
+</div>
 
 <h2>一括処理</h2>
 
