@@ -31,7 +31,7 @@ h3 {
   width: 100%;
   border-collapse: collapse;
   color: whitesmoke;
-  min-width: 800px; /* 6列分の最小幅を確保 */
+  min-width: 400px; /* 6列分の最小幅を確保 */
 }
 
 .song-table th {
@@ -49,17 +49,9 @@ h3 {
   border: 1px solid whitesmoke;
   padding: 8px;
   text-align: center;      /* 中央揃え */
-  font-size: 0.9rem;       /* データセルは少し小さく */
+  font-size: 0.7rem;       /* データセルは少し小さく */
   word-break: break-word;
   white-space: nowrap; /* 改行せず横スクロールさせる */
-}
-
-.song-table tr:nth-child(even) {
-  background-color: #533269;
-}
-
-.song-table tr:nth-child(odd) {
-  background-color: #411f5f;
 }
 
 .table-wrapper {
