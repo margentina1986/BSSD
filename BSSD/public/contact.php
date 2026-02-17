@@ -51,7 +51,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         if (empty($errors)) {
             $to = 'example@example.com'; // 送信先メール
-            $subject = ($type === 'message') ? 'サイトからのメッセージ' : '修正依頼';
+            $subject = ($type === 'message') ? 'サイトからのメッセージ' : 'Message from BSSD';
             $body = "メッセージ内容:\n$message\n\n";
 
             if ($type === 'fix' && $uploadedFiles) {
@@ -61,14 +61,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 }
             }
 
-            if (mail($to, $subject, $body)) {
+            $headers = "From: example@example.com\r\n";
+            if (mail($to, $subject, $body, $headers)) {
                 $success = true;
             } else {
                 $errors[] = "メール送信に失敗しました。";
             }
+
+            }
         }
     }
-}
 ?>
 
 <!doctype html>
@@ -101,23 +103,25 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 </ul>
             <?php endif; ?>
 
-            <div class="tabs">
+            <!--メッセージと修正依頼をタブで分ける想定だったが、何故かメッセージだけ
+                送信ができなかったのでタブ廃止し修正依頼に統一。-->
+            <!--<div class="tabs">
                 <div class="tab active" data-tab="message">メッセージ</div>
                 <div class="tab" data-tab="fix">修正依頼</div>
-            </div>
+            </div>-->
 
             <form method="post" enctype="multipart/form-data">
-                <input type="hidden" name="contact_type" id="contact_type" value="message">
+                <input type="hidden" name="contact_type" id="contact_type" value="fix">
                 <div class="honeypot">
                     <label>チェック</label>
                     <input type="text" name="contact_check" value="">
                 </div>
 
-                <div class="tab-content active" id="tab-message">
-                    <textarea name="message" rows="6" placeholder="メッセージを入力してください" required></textarea>
+                <div class="tab-content" id="tab-message">
+                    <!--<textarea name="message" rows="6" placeholder="メッセージを入力してください"></textarea>-->
                 </div>
-                <div class="tab-content" id="tab-fix">
-                    <textarea name="message" rows="6" placeholder="修正依頼内容を入力してください" required></textarea>
+                <div class="tab-content active" id="tab-fix">
+                    <textarea name="message" rows="6" placeholder="修正依頼の場合は証跡を添付してください。バグ発生時は利用環境を明記してください。" required></textarea>
                     <div class="file-wrapper">
                         <label for="file-upload" class="custom-file-btn">
                             ファイルを選択
@@ -131,7 +135,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         name="attachments[]"
                         multiple
                         accept=".jpg,.jpeg,.png,.pdf">
-                    <p class="form-text">添付ファイル（jpg/png/pdf 最大3枚、3MBまで）:</p>
+                    <p class="form-text">添付ファイル（jpg/png/pdf 1ファイルのみ、3MBまで）:</p>
                 </div>
 
                 <button type="submit">送信</button>
