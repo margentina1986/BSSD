@@ -14,7 +14,7 @@ $rows = require __DIR__ . '/../data/qa_list.php';
     <link rel="stylesheet" href="./styles/footer.css">
 </head>
 
-<body>
+<body id="page-top">
     <nav id="menu"></nav>
 
     <h1>Q & A</h1>
