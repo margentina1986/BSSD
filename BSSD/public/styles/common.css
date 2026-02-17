@@ -19,15 +19,20 @@ nav {
 }
 
 nav ul {
-  list-style: none;
+  display: flex;
+  flex-wrap: nowrap;       /* 横並びを崩さない */
+  padding: 10px 0;
   margin: 0;
-  padding: 10px;
-  text-align: center;
+  list-style: none;
+  overflow-x: auto;        /* 横スクロールを有効化 */
+  -webkit-overflow-scrolling: touch; /* iOSでもスムーズスクロール */
+  white-space: nowrap;     /* 要素を1行に保持 */
+  justify-content: flex-start; /* 中央揃えは解除して左寄せ */
 }
 
 nav ul li {
-  display: inline-block;
-  margin: 0 15px;
+  flex: 0 0 auto;          /* 横幅を自動にしてスクロール対象にする */
+  margin: 0 12px;
 }
 
 nav ul li a {
@@ -35,4 +40,3 @@ nav ul li a {
   color: rgb(255, 55, 0);
   font-weight: bold;
 }
-
