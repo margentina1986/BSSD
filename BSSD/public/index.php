@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="./styles/footer.css">
 </head>
 
-<body>
+<body id="page-top">
   <nav id="menu"></nav>
 
   <h1>BSSD</h1>
