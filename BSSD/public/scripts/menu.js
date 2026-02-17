@@ -1,6 +1,6 @@
 // メニュー項目を配列で定義
 const menuItems = [
-    { name: "Top", link: "top.php" },
+    { name: "Top", link: "index.php" },
     { name: "About This", link: "about.php" },
     { name: "Search", link: "search.php" },
     { name: "Recommend", link: "recommend.php" },
