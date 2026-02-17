@@ -18,17 +18,27 @@ nav {
   /* FYOP意識しつつ、トップページの画像背景色に合わせる */
 }
 
+/* PC向け：中央揃え */
 nav ul {
   display: flex;
-  flex-wrap: nowrap;       /* 横並びを崩さない */
+  flex-wrap: nowrap;
   padding: 10px 0;
   margin: 0;
   list-style: none;
-  overflow-x: auto;        /* 横スクロールを有効化 */
-  -webkit-overflow-scrolling: touch; /* iOSでもスムーズスクロール */
-  white-space: nowrap;     /* 要素を1行に保持 */
-  justify-content: flex-start; /* 中央揃えは解除して左寄せ */
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  white-space: nowrap;
+  justify-content: center; /* 中央揃え */
 }
+
+/* スマホ向け：左揃え */
+@media screen and (max-width: 768px) {
+  nav ul {
+    justify-content: flex-start; /* 左揃えに切り替え */
+    padding-left: 10px; /* 左端に少し余白を追加する場合 */
+  }
+}
+
 
 nav ul li {
   flex: 0 0 auto;          /* 横幅を自動にしてスクロール対象にする */
