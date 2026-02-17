@@ -24,7 +24,7 @@ foreach ($rows as $row) {
     <nav id="menu"></nav>
 
     <h1>Version</h1>
-    <h2>数ある楽曲のバージョン違いについて、当HPでの取り扱い方を表形式でまとめています。</h2>
+    <h2>数ある楽曲のバージョン違いについて、当HPでの取り扱い方を表形式でまとめています。<br>サイズの都合上、PC全画面表示推奨。</h2>
 
     <div class="table-wrapper">
         <table class="song-table">
