@@ -14,7 +14,7 @@
   <nav id="menu"></nav>
 
   <h1>BSSD</h1>
-  <h2>-B'z Support musician Search Datebace-</h2>
+  <h2>-B'z Support musician Search Database-</h2>
   <h3>B'zのサポートミュージシャンの参加楽曲を検索するサイトへようこそ</h3>
 
   <h4>更新履歴</h4>
@@ -26,5 +26,6 @@
   <?php include 'parts/footer.php'; ?>
   
 </body>
+
 
 </html>
