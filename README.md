@@ -16,7 +16,7 @@
 
 
 ## 各ページの説明
-- **トップページ**（更新履歴含む）[top.php](BSSD/public/top.php)
+- **トップページ**（更新履歴含む）[index.php](BSSD/public/index.php)
 - **このページについて**（軽い説明と挨拶文）  [about.php](BSSD/public/about.php)
 - **検索機能**　データベースからプルダウン選択肢を取得し、検索結果を表示します。5人まで増やせて、AND検索を行います。 [search.php](BSSD/public/search.php)
 - **ランキング**　参加曲数のランキングと、検索された回数のランキングを表示します。毎日0時バッチです。 [ranking.php](BSSD/public/ranking.php)
