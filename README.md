@@ -6,12 +6,14 @@
 ## 本番環境
 http://bz-support-db.com
 
-## 使用言語
+## 使用言語とツール
 - フロントエンド：HTML / CSS / JavaScript
 - バックエンド：PHP / MySQL
 - バッチ処理：Python
 - 開発環境：VS Code, DBeaver
 - デプロイ先：さくらサーバー（本番環境）
+- コーディング補助：ChatGPT,Copilot
+- 画像生成：Gemini
 ---
 
 ## 各ページの説明
