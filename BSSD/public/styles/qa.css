@@ -15,20 +15,48 @@ h2 {
     text-shadow: 1px 1px 2px rgba(255, 0, 0, 0.7);
     margin-top: 0;
     /* 上の余白を消す */
-
 }
 
-p {
-    color: whitesmoke;
-    max-width: 900px;
-    width: 90%;
-    font-size: 16px;
-    text-align: left;
-    margin: 0 auto;
-    /* 中央に枠、文章左詰め */
-    padding: 16px 20px;
-    line-height: 1.7;
-    /* 右端で折り返す */
-    background-color: rgba(255, 255, 255, 0.1)
-        /* 少し透過*/
+h3 {
+    color: rgb(255, 77, 0);
+    font-size: clamp(14px, 2.5vw, 22px);
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(255, 0, 0, 0.7);
+    margin-top: 0;
+    margin-bottom: 0;
+    /* 上の余白を消す */
 }
+
+.qa_list {
+  width: 100%;
+  border-collapse: collapse;
+  color: whitesmoke;
+}
+
+.qa_list th {
+  border: 1px solid whitesmoke;
+  padding: 8px;
+  text-align: center;      /* 中央揃え */
+  background-color: rgb(255, 77, 0);
+  color: whitesmoke;
+  font-weight: bold;
+  font-size: 1rem;         
+}
+
+.qa_list td {
+  border: 1px solid whitesmoke;
+  padding: 8px;
+  text-align: center;      /* 中央揃え */
+  font-size: 0.9rem;       /* データセルは少し小さく */
+  word-break: break-word;
+  white-space: normal;
+}
+
+.qa_list tr:nth-child(even) {
+  background-color: #533269;
+}
+
+.qa_list tr:nth-child(odd) {
+  background-color: #411f5f;
+}
+
