@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BSSD</title>
     <link rel="stylesheet" href="./styles/common.css">
-    <link rel="stylesheet" href="./styles/top.css">
+    <link rel="stylesheet" href="./styles/index.css">
     <link rel="stylesheet" href="./styles/footer.css">
 </head>
 
@@ -29,3 +29,4 @@
 
 
 </html>
+
