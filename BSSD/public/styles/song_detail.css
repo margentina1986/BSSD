@@ -1,0 +1,168 @@
+h1 {
+    color: rgb(255, 77, 0);
+    /* 炎のイメージ */
+    font-size: clamp(18px, 3vw, 30px);
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(255, 0, 0, 0.7);
+    margin-bottom: 0;
+    /* 下の余白を消す */
+}
+
+h2 {
+    color: rgb(255, 55, 0);
+    font-size: clamp(14px, 2.5vw, 22px);
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(255, 0, 0, 0.7);
+    margin-top: 0;
+    margin-bottom: 0;
+    /* 上下の余白を消す */
+}
+
+h3 {
+    color: rgb(255, 77, 0);
+    font-size: clamp(11px, 2.5vw, 18px);
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(255, 0, 0, 0.7);
+    margin-top: 0;
+    /* 上の余白を消す */
+}
+
+.version-block {
+    max-width: 700px;
+    margin: 2rem auto;
+}
+
+.version-block h2 {
+    text-align: center;
+    color: rgb(255, 77, 0);
+    font-size: clamp(14px, 2.5vw, 22px);
+    margin-bottom: 0.8rem;
+    text-shadow: 1px 1px 2px rgba(255, 0, 0, 0.7);
+}
+
+/* --------------------
+   詳細テーブル
+-------------------- */
+.detail-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+.detail-table th,
+.detail-table td {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 10px 16px;
+    vertical-align: top;
+    color: whitesmoke;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+/* ラベル列（左） */
+.detail-table th {
+    background-color: rgba(255, 255, 255, 0.08);
+    font-weight: bold;
+    width: 35%;
+    text-align: left;
+    white-space: nowrap;
+}
+
+/* 値列（右） */
+.detail-table td {
+    background-color: rgba(255, 255, 255, 0.03);
+    width: 65%;
+}
+
+/* 参加ミュージシャンのラベル行（colspan=2） */
+.detail-table th[colspan="2"] {
+    width: 100%;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+/* 参加ミュージシャンの値行（colspan=2） */
+.detail-table td[colspan="2"] {
+    width: 100%;
+    text-align: left;
+    background-color: rgba(255, 255, 255, 0.03);
+}
+
+/* --------------------
+   戻るリンク
+-------------------- */
+.back-link {
+    display: block;            /* ブロック化 */
+    margin: 0.5rem auto 0 auto;  /* 上マージン1rem、左右自動で中央寄せ */
+    color: rgb(255, 77, 0);
+    font-size: clamp(10px, 2.5vw, 18px);
+    text-shadow: 1px 1px 2px rgba(255, 0, 0, 0.7);
+    text-align: center;        /* テキスト中央揃え */
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+/* --------------------
+   スマホ対応（幅600px以下）
+-------------------- */
+@media (max-width: 600px) {
+    .version-block {
+        max-width: 95%;
+        margin: 1.5rem auto;
+    }
+
+    .detail-table th,
+    .detail-table td {
+        font-size: 13px;
+        padding: 8px 10px;
+    }
+
+    .detail-table th {
+        width: 40%;
+    }
+
+    .detail-table td {
+        width: 60%;
+    }
+}
+
+/* --------------------
+   前後ナビ
+-------------------- */
+.song-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 700px;
+    margin: 0.5rem auto 1.5rem;
+    padding: 0 8px;
+    position: static;  /* fixedやabsoluteを打ち消す */
+}
+
+.song-nav-prev,
+.song-nav-next {
+    color: rgb(255, 77, 0);
+    font-size: 14px;
+    text-decoration: none;
+    max-width: 45%;
+    line-height: 1.4;
+}
+
+.song-nav-prev {
+    text-align: left;
+}
+
+.song-nav-next {
+    text-align: right;
+}
+
+.song-nav-prev:hover,
+.song-nav-next:hover {
+    text-decoration: underline;
+}
+
+.song-nav-disabled {
+    visibility: hidden;
+}
