@@ -5,9 +5,8 @@ return [
         'version' => 'オリジナル',
         'first_work' => "B'z",
         'difference' => '-',
-        'policy' => '打ち込みのため
-検索結果には表示されず',
-        
+        'policy' => '打ち込みのため検索結果には表示されず',
+        'musicians' => '打ち込みのみ',
     ],
     [
         'title' => 'だからその手を離して',
@@ -15,9 +14,8 @@ return [
 -OFF THE LOCK STYLE-',
         'first_work' => 'BAD COMMUNICATION',
         'difference' => '全英詞リメイク',
-        'policy' => '打ち込みのため
-検索結果には表示されず',
-        
+        'policy' => '打ち込みのため検索結果には表示されず',
+        'musicians' => '打ち込みのみ',
     ],
     [
         'title' => 'だからその手を離して',
@@ -25,7 +23,7 @@ return [
         'first_work' => '今夜月の見える丘に',
         'difference' => '再録',
         'policy' => '別曲扱い',
-        
+        'musicians' => 'B:満園庄太郎　D:黒瀬蛙一',
     ],
     [
         'title' => 'ハートも濡れるナンバー
@@ -34,9 +32,8 @@ return [
         'first_work' => "B'z
 だからその手を離して",
         'difference' => '-',
-        'policy' => '打ち込みのため
-検索結果には表示されず',
-        
+        'policy' => '打ち込みのため検索結果には表示されず',
+        'musicians' => '打ち込みのみ',
     ],
     [
         'title' => 'ハートも濡れるナンバー
@@ -45,25 +42,25 @@ return [
         'first_work' => 'The 7th Blues',
         'difference' => '全英詞のブルースバージョン',
         'policy' => '別曲扱い',
-        
+        'musicians' => 'B:明石昌夫　D:青山純　K:増田隆宣　C:高嶋りん
+        S:冷牟田竜之　S:GAMOU　S:谷中敦　Tp:名古屋君義　Tb:北原雅彦',
     ],
     [
         'title' => '君を今抱きたい',
         'version' => 'オリジナル',
         'first_work' => "B'z",
         'difference' => '-',
-        'policy' => '打ち込みのため
-検索結果には表示されず',
-        
+        'policy' => '打ち込みのため検索結果には表示されず',
+        'musicians' => '打ち込みのみ',
     ],
     [
         'title' => '君を今抱きたい',
-        'version' => 'OUT OF THE RAIN -OFF THE LOCK STYLE-',
+        'version' => 'OUT OF THE RAIN
+        -OFF THE LOCK STYLE-',
         'first_work' => 'BAD COMMUNICATION',
         'difference' => '全英詞リメイク',
-        'policy' => '打ち込みのため
-検索結果には表示されず',
-        
+        'policy' => '打ち込みのため検索結果には表示されず',
+        'musicians' => '打ち込みのみ',
     ],
     [
         'title' => '君の中で踊りたい',
@@ -72,16 +69,15 @@ return [
         'difference' => '-',
         'policy' => 'シングル・アルバム同時発売だが
 アルバムを初回収録作品として扱う',
-        
+        'musicians' => 'D:江口信夫',
     ],
     [
         'title' => '君の中で踊りたい',
         'version' => 'I Wanna Dance Wicked Beat Style',
         'first_work' => 'WICKED BEAT',
         'difference' => '全英詞リメイク',
-        'policy' => '打ち込みのため
-検索結果には表示されず',
-        
+        'policy' => '打ち込みのため検索結果には表示されず',
+        'musicians' => '打ち込みのみ',
     ],
     [
         'title' => '君の中で踊りたい',
@@ -89,15 +85,16 @@ return [
         'first_work' => 'STARS',
         'difference' => 'リメイク',
         'policy' => '別曲扱い',
-        
+        'musicians' => 'B:Yukihide "YT" Takiyama　D:玉田豊夢　K:川村ケン　P:斉藤ノヴ',
     ],
     [
         'title' => 'NEVER LET YOU GO',
         'version' => 'オリジナル',
         'first_work' => 'OFF THE LOCK',
         'difference' => '-',
-        'policy' => '',
-        
+        'policy' => '通常通り',
+        'musicians' => 'D:江口信夫　C:明石昌夫　C:寺島良一
+        C:Norihiko "Thunder Bird" Tsuruta　C:Nobumitsu "Kyoso" Asai',
     ],
     [
         'title' => 'NEVER LET YOU GO',
@@ -105,15 +102,16 @@ return [
         'first_work' => "B'z The \"Mixture\"",
         'difference' => '再録',
         'policy' => '別曲扱い',
-        
+        'musicians' => 'B:中村 "キタロー" 幸司　D:山木秀夫',
     ],
     [
         'title' => 'GUITAR KIDS RHAPSODY',
         'version' => 'オリジナル',
         'first_work' => 'OFF THE LOCK',
         'difference' => '-',
-        'policy' => '',
-        
+        'policy' => '通常通り',
+        'musicians' => 'D:青山純　C:明石昌夫　C:寺島良一
+        C:Norihiko "Thunder Bird" Tsuruta　C:Nobumitsu "Kyoso" Asai',
     ],
     [
         'title' => 'GUITAR KIDS RHAPSODY',
@@ -121,16 +119,16 @@ return [
         'first_work' => '愛しい人よGood Night...',
         'difference' => '再録',
         'policy' => '別曲扱い',
-        
+        'musicians' => 'D:青山純',
     ],
     [
         'title' => 'LOVING ALL NIGHT',
         'version' => 'オリジナル',
         'first_work' => 'OFF THE LOCK',
         'difference' => '-',
-        'policy' => '打ち込みのため
-検索結果には表示されず',
-        
+        'policy' => '通常通り',
+        'musicians' => 'C:明石昌夫　C:寺島良一
+        C:Norihiko "Thunder Bird" Tsuruta　C:Nobumitsu "Kyoso" Asai',
     ],
     [
         'title' => 'LOVING ALL NIGHT',
@@ -138,15 +136,16 @@ return [
         'first_work' => 'MARS',
         'difference' => '全英詞リメイク',
         'policy' => '別曲扱い',
-        
+        'musicians' => 'D:青山純　BH:加藤友彦',
     ],
     [
         'title' => 'OH! GIRL',
         'version' => 'オリジナル',
         'first_work' => 'OFF THE LOCK',
         'difference' => '-',
-        'policy' => '',
-        
+        'policy' => '通常通り',
+        'musicians' => 'D:青山純　C:明石昌夫　C:寺島良一
+        C:Norihiko "Thunder Bird" Tsuruta　C:Nobumitsu "Kyoso" Asai',
     ],
     [
         'title' => 'OH! GIRL',
@@ -154,15 +153,15 @@ return [
         'first_work' => "B'z The \"Mixture\"",
         'difference' => '再録',
         'policy' => '別曲扱い',
-        
+        'musicians' => 'B:満園庄太郎　D:黒瀬蛙一',
     ],
     [
         'title' => 'BAD COMMUNICATION',
         'version' => 'オリジナル',
         'first_work' => 'BAD COMMUNICATION',
         'difference' => '-',
-        'policy' => '',
-        
+        'policy' => '通常通り',
+        'musicians' => 'Voice:エイミー',
     ],
     [
         'title' => 'BAD COMMUNICATION',
@@ -171,7 +170,7 @@ return [
         'difference' => '全英詞',
         'policy' => '本来なら別曲扱いすべきだが、検索対象として該当するのが
 冒頭の女性ボイスのみ&そこは既存の音声であるため同一扱い',
-        
+        'musicians' => 'Voice:エイミー',
     ],
     [
         'title' => 'BAD COMMUNICATION',
@@ -179,7 +178,7 @@ return [
         'first_work' => 'LOOSE',
         'difference' => 'アコースティックバージョン',
         'policy' => '別曲扱いだが冒頭の女性ボイスは既存音声のため表示されない',
-        
+        'musicians' => 'B:伊藤広規　D:青山純　K:小野塚晃　BH:妹尾隆一郎　Voice:エイミー',
     ],
     [
         'title' => 'BAD COMMUNICATION',
@@ -187,33 +186,32 @@ return [
         'first_work' => "B'z The Best \"ULTRA Pleasure\"",
         'difference' => '生音　ハードロックアレンジ',
         'policy' => '別曲扱いだが冒頭の女性ボイスは既存音声のため表示されない',
-        
+        'musicians' => 'B:バリー・スパークス　D:シェーン・ガラース　Voice:エイミー',
     ],
     [
         'title' => 'LADY-GO-ROUND',
         'version' => 'オリジナル',
         'first_work' => 'BREAK THROUGH',
         'difference' => '-',
-        'policy' => '"シングル・アルバム同時発売だが
-アルバムを初回収録作品として扱う"',
-        
+        'policy' => 'シングル・アルバム同時発売だが
+アルバムを初回収録作品として扱う',
+        'musicians' => 'C:坪倉唯子',
     ],
     [
         'title' => 'LADY-GO-ROUND',
         'version' => 'Lady-Go-Round "W-40" Style',
         'first_work' => 'WICKED BEAT',
         'difference' => '全英詞',
-        'policy' => '打ち込みのため
-検索結果には表示されず',
-        
+        'policy' => '打ち込みのため検索結果には表示されず',
+        'musicians' => '打ち込みのみ',
     ],
     [
         'title' => 'LOVE & CHAIN',
         'version' => 'オリジナル',
         'first_work' => 'BREAK THROUGH',
         'difference' => '-',
-        'policy' => '',
-        
+        'policy' => '通常通り',
+        'musicians' => 'C:坪倉唯子',
     ],
     [
         'title' => 'LOVE & CHAIN',
@@ -221,15 +219,15 @@ return [
         'first_work' => 'MARS',
         'difference' => '全英詞リメイク',
         'policy' => '別曲扱い',
-        
+        'musicians' => 'D:青山純　C:大黒摩季　Voice:藤田理麻',
     ],
     [
         'title' => '今では…今なら…今も…',
         'version' => 'オリジナル',
         'first_work' => 'BREAK THROUGH',
         'difference' => '-',
-        'policy' => '',
-        
+        'policy' => '通常通り',
+        'musicians' => 'D:青山純　C:明石昌夫　C:坪倉唯子　C:阿部薫　C:広本葉子',
     ],
     [
         'title' => '今では…今なら…今も…',
@@ -237,33 +235,31 @@ return [
         'first_work' => "B'z The \"Mixture\"",
         'difference' => '再録',
         'policy' => '別曲扱い',
-        
+        'musicians' => 'B:中村 "キタロー" 幸司　D:山木秀夫',
     ],
     [
         'title' => '太陽のKomachi Angel',
         'version' => 'オリジナル',
         'first_work' => '太陽のKomachi Angel',
         'difference' => '-',
-        'policy' => '打ち込みのため
-検索結果には表示されず',
-        
+        'policy' => '打ち込みのため検索結果には表示されず',
+        'musicians' => '打ち込みのみ',
     ],
     [
         'title' => '太陽のKomachi Angel',
         'version' => 'Komachi-Angel Red Hot Style',
         'first_work' => 'WICKED BEAT',
         'difference' => '全英詞リメイク',
-        'policy' => '打ち込みのため
-検索結果には表示されず',
-        
+        'policy' => '打ち込みのため検索結果には表示されず',
+        'musicians' => '打ち込みのみ',
     ],
     [
         'title' => 'EASY COME, EASY GO!',
         'version' => 'オリジナル',
         'first_work' => 'EASY COME, EASY GO!',
         'difference' => '-',
-        'policy' => '',
-        
+        'policy' => '通常通り',
+        'musicians' => 'D:青山純',
     ],
     [
         'title' => 'EASY COME, EASY GO!',
@@ -271,33 +267,33 @@ return [
         'first_work' => 'RISKY',
         'difference' => 'リミックス',
         'policy' => '同一曲扱い',
-        
+        'musicians' => 'D:青山純',
     ],
     [
-        'title' => '"GIMME YOUR LOVE
--不屈のLOVE DRIVER-"',
+        'title' => 'GIMME YOUR LOVE
+-不屈のLOVE DRIVER-',
         'version' => 'オリジナル',
         'first_work' => 'RISKY',
         'difference' => '-',
-        'policy' => '',
-        
+        'policy' => '通常通り',
+        'musicians' => 'D:青山純',
     ],
     [
-        'title' => '"GIMME YOUR LOVE
--不屈のLOVE DRIVER-"',
+        'title' => 'GIMME YOUR LOVE
+-不屈のLOVE DRIVER-',
         'version' => 'Gimme your love (Live at Tokyo Dome)',
         'first_work' => 'Calling',
         'difference' => 'ライブ音源',
         'policy' => '別曲扱い',
-        
+        'musicians' => 'B:明石昌夫　D:デニー・フォンハイザー　K:増田隆宣',
     ],
     [
         'title' => 'LADY NAVIGATION',
         'version' => 'オリジナル',
         'first_work' => 'LADY NAVIGATION',
         'difference' => '-',
-        'policy' => '',
-        
+        'policy' => '通常通り',
+        'musicians' => 'D:田中一光　K:増田隆宣',
     ],
     [
         'title' => 'LADY NAVIGATION',
@@ -305,7 +301,7 @@ return [
         'first_work' => 'MARS',
         'difference' => '全英詞のロックバージョン',
         'policy' => '別曲扱い',
-        
+        'musicians' => 'D:田中一光',
     ],
     [
         'title' => 'LADY NAVIGATION',
@@ -313,60 +309,58 @@ return [
         'first_work' => 'The 7th Blues',
         'difference' => '全英詞のブルースバージョン',
         'policy' => '別曲扱い',
-        
+        'musicians' => 'B:明石昌夫　D:青山純　K:小野塚晃　C:生沢佑一',
     ],
     [
-        'title' => '"Pleasure’91
-〜人生の快楽〜"',
+        'title' => "Pleasure’91
+〜人生の快楽〜",
         'version' => 'オリジナル',
         'first_work' => 'LADY NAVIGATION',
         'difference' => '-',
-        'policy' => '',
-        
+        'policy' => '通常通り',
+        'musicians' => 'D:田中一光　K:増田隆宣',
     ],
     [
-        'title' => '"Pleasure’91
-〜人生の快楽〜"',
+        'title' => "Pleasure’91
+〜人生の快楽〜",
         'version' => "Pleasure'98 〜人生の快楽〜",
         'first_work' => "B'z The Best \"Treasure\"",
         'difference' => '再録、一部歌詞変更',
         'policy' => '別曲扱い',
-        
+        'musicians' => 'B:明石昌夫　D:田中一光　K:増田隆宣',
     ],
     [
-        'title' => '"Pleasure’91
-〜人生の快楽〜"',
+        'title' => "Pleasure’91
+〜人生の快楽〜",
         'version' => 'Pleasure 2008 〜人生の快楽〜',
         'first_work' => "B'z The Best \"ULTRA Pleasure\"",
         'difference' => '再録、一部歌詞変更',
         'policy' => '別曲扱い',
-        
+        'musicians' => 'B:バリー・スパークス　D:シェーン・ガラース',
     ],
     [
-        'title' => '"孤独のRunaway
-"',
+        'title' => '孤独のRunaway',
         'version' => 'オリジナル',
         'first_work' => 'MARS',
         'difference' => '-',
-        'policy' => '',
-        
+        'policy' => '通常通り',
+        'musicians' => 'D:青山純',
     ],
     [
-        'title' => '"孤独のRunaway
-"',
+        'title' => '孤独のRunaway',
         'version' => 'Mixture style',
         'first_work' => "B'z The \"Mixture\"",
         'difference' => '再録',
         'policy' => '別曲扱い',
-        
+        'musicians' => 'B:満園庄太郎　D:黒瀬蛙一',
     ],
     [
         'title' => 'ALONE',
         'version' => 'オリジナル',
         'first_work' => 'ALONE',
         'difference' => '-',
-        'policy' => '',
-        
+        'policy' => '通常通り',
+        'musicians' => 'D:田中一光　K:小野塚晃',
     ],
     [
         'title' => 'ALONE',
@@ -374,16 +368,15 @@ return [
         'first_work' => 'IN THE LIFE',
         'difference' => '冒頭にコーラス追加',
         'policy' => '同一曲扱い',
-        
+        'musicians' => 'D:田中一光　K:小野塚晃',
     ],
     [
         'title' => "BLOWIN'",
         'version' => 'オリジナル',
         'first_work' => "BLOWIN'",
         'difference' => '-',
-        'policy' => '打ち込みのため
-検索結果には表示されず',
-        
+        'policy' => '打ち込みのため検索結果には表示されず',
+        'musicians' => '打ち込みのみ',
     ],
     [
         'title' => "BLOWIN'",
@@ -391,15 +384,15 @@ return [
         'first_work' => "B'z The Best \"ULTRA Treasure\"",
         'difference' => '再録',
         'policy' => '別曲扱い',
-        
+        'musicians' => 'B:バリー・スパークス　D:シェーン・ガラース',
     ],
     [
         'title' => 'RUN',
         'version' => 'オリジナル',
         'first_work' => 'RUN',
         'difference' => '-',
-        'policy' => '',
-        
+        'policy' => '通常通り',
+        'musicians' => 'B:明石昌夫　D:田中一光　S:勝田一樹',
     ],
     [
         'title' => 'RUN',
@@ -407,7 +400,7 @@ return [
         'first_work' => "B'z The Best \"Treasure\"",
         'difference' => '再録',
         'policy' => '別曲扱い',
-        
+        'musicians' => 'B:明石昌夫　D:田中一光　K:増田隆宣　S:古村敏比古',
     ],
     [
         'title' => 'RUN',
@@ -415,7 +408,7 @@ return [
         'first_work' => "The Complete B'z",
         'difference' => 'ライブ音源',
         'policy' => '別曲扱い',
-        
+        'musicians' => 'B:明石昌夫　D:田中一光　K:増田隆宣',
     ],
     [
         'title' => 'Friends',
@@ -423,7 +416,7 @@ return [
         'first_work' => 'FRIENDS',
         'difference' => '-',
         'policy' => '日色Stringsによる演奏であり、団体は検索対象外',
-        
+        'musicians' => 'なし',
     ],
     [
         'title' => 'Friends',
@@ -432,16 +425,7 @@ return [
         'difference' => 'ガットギターでの演奏',
         'policy' => 'サポートミュージシャン不参加のため
 検索結果には表示されず',
-        
-    ],
-    [
-        'title' => 'Friends',
-        'version' => 'Friends II',
-        'first_work' => 'FRIENDS II',
-        'difference' => 'ガットギターでの演奏',
-        'policy' => 'サポートミュージシャン不参加のため
-検索結果には表示されず',
-        
+        'musicians' => 'なし',
     ],
     [
         'title' => 'Friends',
@@ -449,15 +433,15 @@ return [
         'first_work' => 'FRIENDS III',
         'difference' => 'ピアノ、チェロ、オーボエによる演奏',
         'policy' => '別曲扱い',
-        
+        'musicians' => 'K:小野塚晃　Ob:荒絵理子　Vc:諸岡由美子',
     ],
     [
         'title' => 'いつかのメリークリスマス',
         'version' => 'オリジナル',
         'first_work' => 'FRIENDS',
         'difference' => '-',
-        'policy' => '',
-        
+        'policy' => '通常通り',
+        'musicians' => 'B:明石昌夫　D:田中一光　K:小野塚晃　C:古川真一',
     ],
     [
         'title' => 'いつかのメリークリスマス',
@@ -465,7 +449,7 @@ return [
         'first_work' => 'FRIENDS',
         'difference' => 'ピアノインストゥルメンタル',
         'policy' => '別曲扱い',
-        
+        'musicians' => 'K:小野塚晃',
     ],
     [
         'title' => 'いつかのメリークリスマス',
@@ -473,7 +457,7 @@ return [
         'first_work' => "The Ballads 〜Love & B'z〜",
         'difference' => '打ち込み　アップテンポ',
         'policy' => '同一曲扱い',
-        
+        'musicians' => '打ち込みのみ',
     ],
     [
         'title' => 'いつかのメリークリスマス',
@@ -481,16 +465,16 @@ return [
         'first_work' => "B'z The Best \"Pleasure II\"",
         'difference' => 'アコースティック主体のリメイク',
         'policy' => '同一曲扱い',
-        
+        'musicians' => 'C:古川真一',
     ],
     [
         'title' => 'JOY',
         'version' => 'オリジナル',
-        'first_work' => '"愛のままにわがままに
-僕は君だけを傷つけない"',
+        'first_work' => '愛のままにわがままに
+僕は君だけを傷つけない',
         'difference' => '-',
-        'policy' => '',
-        
+        'policy' => '通常通り',
+        'musicians' => 'B:明石昌夫　D:田中一光　C:大黒摩季',
     ],
     [
         'title' => 'JOY',
@@ -498,15 +482,15 @@ return [
         'first_work' => "B'z The \"Mixture\"",
         'difference' => 'リミックス',
         'policy' => '同一曲扱い',
-        
+        'musicians' => 'B:明石昌夫　D:田中一光　C:大黒摩季',
     ],
     [
         'title' => 'KARA・KARA',
         'version' => 'オリジナル',
         'first_work' => '裸足の女神',
         'difference' => '-',
-        'policy' => '',
-        
+        'policy' => '通常通り',
+        'musicians' => 'B:明石昌夫　D:青山純',
     ],
     [
         'title' => 'KARA・KARA',
@@ -514,15 +498,15 @@ return [
         'first_work' => "B'z The \"Mixture\"",
         'difference' => 'リミックス',
         'policy' => '同一曲扱い',
-        
+        'musicians' => 'B:明石昌夫　D:青山純',
     ],
     [
         'title' => 'LOVE IS DEAD',
         'version' => 'オリジナル',
         'first_work' => 'The 7th Blues',
         'difference' => '-',
-        'policy' => '',
-        
+        'policy' => '通常通り',
+        'musicians' => 'B:明石昌夫　D:青山純　K:小野塚晃　S:ジェイク・コンセプション　S:勝田一樹　Tp:数原晋',
     ],
     [
         'title' => 'LOVE IS DEAD',
@@ -530,7 +514,7 @@ return [
         'first_work' => "The Complete B'z",
         'difference' => 'ライブ音源',
         'policy' => '別曲扱い',
-        
+        'musicians' => 'B:明石昌夫　D:田中一光　K:増田隆宣',
     ],
     [
         'title' => 'LOVE IS DEAD',
@@ -538,14 +522,15 @@ return [
         'first_work' => "B'z The Best \"ULTRA Treasure\"",
         'difference' => '冒頭の会話カット',
         'policy' => '同一曲扱い',
-        
+        'musicians' => 'B:明石昌夫　D:青山純　K:小野塚晃　S:ジェイク・コンセプション　S:勝田一樹　Tp:数原晋',
     ],
     [
         'title' => 'hole in my heart',
         'version' => 'オリジナル',
         'first_work' => 'MOTEL',
         'difference' => '-',
-        'policy' => '',
+        'policy' => '通常通り',
+        'musicians' => 'B:明石昌夫　D:青山純',
     ],
     [
         'title' => 'hole in my heart',
@@ -553,13 +538,16 @@ return [
         'first_work' => "B'z The \"Mixture\"",
         'difference' => 'リミックス',
         'policy' => '同一曲扱い',
+        'musicians' => 'B:明石昌夫　D:青山純',
     ],
     [
         'title' => 'ねがい',
         'version' => 'オリジナル',
         'first_work' => 'ねがい',
         'difference' => '-',
-        'policy' => '',
+        'policy' => '通常通り',
+        'musicians' => 'B:中村 "キタロー" 幸司　D:山木秀夫　K:小野塚晃　C:生沢佑一　C:千葉彩由実
+        S:勝田一樹　Tp:佐々木史郎　Tp:小林太　Tb:中路英明',
     ],
     [
         'title' => 'ねがい',
@@ -567,13 +555,17 @@ return [
         'first_work' => 'LOOSE',
         'difference' => 'リアレンジし再録',
         'policy' => '別曲扱い',
+        'musicians' => 'B:明石昌夫　D:青山純　K:小野塚晃　C:生沢佑一　C:千葉彩由実
+        S:勝田一樹　Tp:佐々木史郎　Tp:小林太　Tb:中路英明',
     ],
     [
         'title' => 'YOU & I',
         'version' => 'オリジナル',
         'first_work' => 'ねがい',
         'difference' => '-',
-        'policy' => '',
+        'policy' => '通常通り',
+        'musicians' => 'B:中村 "キタロー" 幸司　D:山木秀夫　K:小野塚晃
+        S:勝田一樹　Tp:佐々木史郎　Tp:小林太　Tb:中路英明',
     ],
     [
         'title' => 'YOU & I',
@@ -581,30 +573,35 @@ return [
         'first_work' => "B'z The \"Mixture\"",
         'difference' => 'リミックス',
         'policy' => '同一曲扱い',
+        'musicians' => 'B:中村 "キタロー" 幸司　D:山木秀夫　K:小野塚晃
+        S:勝田一樹　Tp:佐々木史郎　Tp:小林太　Tb:中路英明',
     ],
     [
         'title' => 'love me, I love you',
         'version' => 'オリジナル',
         'first_work' => 'love me, I love you',
         'difference' => '-',
-        'policy' => '"シングルではベースが打ち込み、ドラムが青山氏
+        'policy' => 'シングルではベースが打ち込み、ドラムが青山氏
 アルバムではベースが明石氏、ドラムが青山氏のため
-処理が非常に複雑になるのでアルバムを初回収録作品として扱う"',
+処理が非常に複雑になるのでアルバムを初回収録作品として扱う',
+        'musicians' => 'D:青山純　C:岩切玲子　S:勝田一樹　Tp:佐々木史郎　Tp:小林太　Tb:中路英明',
     ],
     [
         'title' => 'love me, I love you',
         'version' => 'with G Bass',
         'first_work' => 'LOOSE',
-        'difference' => '"ベース生音、コーラス追加、
-ギターの音量"',
+        'difference' => 'ベース生音、コーラス追加、
+ギターの音量',
         'policy' => '別曲扱い',
+        'musicians' => 'B:明石昌夫　D:青山純　C:岩切玲子　S:勝田一樹　Tp:佐々木史郎　Tp:小林太　Tb:中路英明',
     ],
     [
         'title' => '東京',
         'version' => 'オリジナル',
         'first_work' => 'love me, I love you',
         'difference' => '-',
-        'policy' => '',
+        'policy' => '通常通り',
+        'musicians' => 'B:明石昌夫　D:青山純　K:小野塚晃　C:古川真一',
     ],
     [
         'title' => '東京',
@@ -612,13 +609,15 @@ return [
         'first_work' => "B'z The \"Mixture\"",
         'difference' => 'リミックス',
         'policy' => '同一曲扱い',
+        'musicians' => 'B:明石昌夫　D:青山純　K:小野塚晃　C:古川真一',
     ],
     [
         'title' => 'ビリビリ',
         'version' => 'オリジナル',
         'first_work' => 'Liar! Liar!',
         'difference' => '-',
-        'policy' => '',
+        'policy' => '通常通り',
+        'musicians' => 'D:山木秀夫',
     ],
     [
         'title' => 'ビリビリ',
@@ -626,13 +625,15 @@ return [
         'first_work' => "B'z The \"Mixture\"",
         'difference' => 'リミックス',
         'policy' => '同一曲扱い',
+        'musicians' => 'D:山木秀夫',
     ],
     [
         'title' => 'スイマーよ!!',
         'version' => 'オリジナル',
         'first_work' => 'SURVIVE',
         'difference' => '-',
-        'policy' => '',
+        'policy' => '通常通り',
+        'musicians' => 'B:徳永暁人　D:山木秀夫',
     ],
     [
         'title' => 'スイマーよ!!',
@@ -640,13 +641,15 @@ return [
         'first_work' => 'ultra soul',
         'difference' => 'リメイク',
         'policy' => '別曲扱い',
+        'musicians' => 'B:徳永暁人',
     ],
     [
         'title' => 'さまよえる蒼い弾丸',
         'version' => 'オリジナル',
         'first_work' => 'さまよえる蒼い弾丸',
         'difference' => '-',
-        'policy' => '',
+        'policy' => '通常通り',
+        'musicians' => 'B:明石昌夫　D:山木秀夫',
     ],
     [
         'title' => 'さまよえる蒼い弾丸',
@@ -654,22 +657,25 @@ return [
         'first_work' => "B'z",
         'difference' => '全英詞リメイク',
         'policy' => '別曲扱い',
+        'musicians' => 'B:バリー・スパークス　D:シェーン・ガラース',
     ],
     [
         'title' => 'HOME',
         'version' => 'オリジナル',
         'first_work' => 'HOME',
         'difference' => '-',
-        'policy' => '',
+        'policy' => '通常通り',
+        'musicians' => 'B:明石昌夫　D:山木秀夫　K:和泉宏隆　P:斉藤ノヴ',
     ],
     [
         'title' => 'HOME',
         'version' => 'シークレットトラック',
         'first_work' => "B'z The Best \"Treasure\"",
-        'difference' => '"アコースティックバージョン
-1番のみ"',
+        'difference' => 'アコースティックバージョン
+1番のみ',
         'policy' => 'サポートミュージシャン不参加のため
 検索結果には表示されず',
+        'musicians' => 'なし',
     ],
     [
         'title' => 'HOME',
@@ -677,13 +683,15 @@ return [
         'first_work' => "B'z The Best \"ULTRA Treasure\"",
         'difference' => '全英詞再録',
         'policy' => '別曲扱い',
+        'musicians' => 'B:徳永暁人　D:シェーン・ガラース',
     ],
     [
         'title' => 'ギリギリchop',
         'version' => 'オリジナル',
         'first_work' => 'ギリギリchop',
         'difference' => '-',
-        'policy' => '',
+        'policy' => '通常通り',
+        'musicians' => 'B:寺沢功一　D:黒瀬蛙一',
     ],
     [
         'title' => 'ギリギリchop',
@@ -691,13 +699,15 @@ return [
         'first_work' => 'Brotherhood',
         'difference' => '再録',
         'policy' => '別曲扱い',
+        'musicians' => 'B:ビリー・シーン　D:パット・トーピー',
     ],
     [
         'title' => 'F・E・A・R',
         'version' => 'オリジナル',
         'first_work' => 'Brotherhood',
         'difference' => '-',
-        'policy' => '',
+        'policy' => '通常通り',
+        'musicians' => 'B:満園庄太郎　D:黒瀬蛙一',
     ],
     [
         'title' => 'F・E・A・R',
@@ -705,6 +715,7 @@ return [
         'first_work' => "The Complete B'z",
         'difference' => 'ライブ音源',
         'policy' => '別曲扱い',
+        'musicians' => 'B:満園庄太郎　D:黒瀬蛙一　K:増田隆宣',
     ],
     [
         'title' => 'F・E・A・R',
@@ -712,13 +723,15 @@ return [
         'first_work' => "B'z The Best \"ULTRA Treasure\"",
         'difference' => 'リミックス',
         'policy' => '同一曲扱い',
+        'musicians' => 'B:満園庄太郎　D:黒瀬蛙一',
     ],
     [
         'title' => 'Brotherhood',
         'version' => 'オリジナル',
         'first_work' => 'Brotherhood',
         'difference' => '-',
-        'policy' => '',
+        'policy' => '通常通り',
+        'musicians' => 'B:ビリー・シーン　D:黒瀬蛙一',
     ],
     [
         'title' => 'Brotherhood',
@@ -726,13 +739,15 @@ return [
         'first_work' => "The Complete B'z",
         'difference' => 'ライブ音源',
         'policy' => '別曲扱い',
+        'musicians' => 'B:徳永暁人　D:黒瀬蛙一　K:増田隆宣',
     ],
     [
         'title' => '今夜月の見える丘に',
         'version' => 'オリジナル',
         'first_work' => '今夜月の見える丘に',
         'difference' => '-',
-        'policy' => '',
+        'policy' => '通常通り',
+        'musicians' => 'B:中村 "キタロー" 幸司　D:山木秀夫　K:小野塚晃',
     ],
     [
         'title' => '今夜月の見える丘に',
@@ -740,6 +755,7 @@ return [
         'first_work' => 'ELEVEN',
         'difference' => 'ギターソロが別テイク',
         'policy' => '同一曲扱い',
+        'musicians' => 'B:中村 "キタロー" 幸司　D:山木秀夫　K:小野塚晃',
     ],
     [
         'title' => '今夜月の見える丘に',
@@ -747,13 +763,15 @@ return [
         'first_work' => "The Ballads 〜Love & B'z〜",
         'difference' => 'ギターソロが別テイク',
         'policy' => '同一曲扱い',
+        'musicians' => 'B:中村 "キタロー" 幸司　D:山木秀夫　K:小野塚晃',
     ],
     [
         'title' => 'juice',
         'version' => 'オリジナル',
         'first_work' => 'juice',
         'difference' => '-',
-        'policy' => '',
+        'policy' => '通常通り',
+        'musicians' => 'B:フィンガーズ　D:ブライアン・ティッシー',
     ],
     [
         'title' => 'juice',
@@ -761,6 +779,7 @@ return [
         'first_work' => 'ELEVEN',
         'difference' => 'リミックス',
         'policy' => '同一曲扱い',
+        'musicians' => 'B:フィンガーズ　D:ブライアン・ティッシー',
     ],
     [
         'title' => 'juice',
@@ -768,45 +787,48 @@ return [
         'first_work' => "B'z",
         'difference' => '全英詞リメイク',
         'policy' => '別曲扱い',
+        'musicians' => 'B:バリー・スパークス　D:シェーン・ガラース',
     ],
     [
         'title' => 'TOKYO DEVIL',
         'version' => 'オリジナル',
         'first_work' => 'ELEVEN',
         'difference' => '-',
-        'policy' => '',
+        'policy' => '通常通り',
+        'musicians' => 'B:明石昌夫　D:黒瀬蛙一',
     ],
     [
         'title' => 'TOKYO DEVIL',
         'version' => 'DEVIL',
         'first_work' => "B'z The Best \"ULTRA Treasure\"",
         'difference' => '全英詞リメイク',
-        'policy' => '打ち込みのため
-検索結果には表示されず',
+        'policy' => '打ち込みのため検索結果には表示されず',
+        'musicians' => '打ち込みのみ',
     ],
     [
         'title' => 'ultra soul',
         'version' => 'オリジナル',
         'first_work' => 'ultra soul',
         'difference' => '-',
-        'policy' => '打ち込みのため
-検索結果には表示されず',
+        'policy' => '打ち込みのため検索結果には表示されず',
+        'musicians' => '打ち込みのみ',
     ],
     [
         'title' => 'ultra soul',
         'version' => 'Splash Style',
         'first_work' => 'GOLD',
         'difference' => 'アコギ主体のリアレンジ',
-        'policy' => '打ち込みのため
-検索結果には表示されず',
+        'policy' => '打ち込みのため検索結果には表示されず',
+        'musicians' => '打ち込みのみ',
     ],
     [
         'title' => 'ultra soul',
         'version' => 'Alternative Guitar Solo ver.',
         'first_work' => 'GREEN',
-        'difference' => '"ソロ以外にもギターが異なる
-ベースが生音"',
+        'difference' => 'ソロ以外にもギターが異なる
+ベースが生音',
         'policy' => '別曲扱い',
+        'musicians' => 'B:徳永暁人',
     ],
     [
         'title' => 'ultra soul',
@@ -814,14 +836,16 @@ return [
         'first_work' => "The Complete B'z",
         'difference' => 'ライブ音源',
         'policy' => '別曲扱い',
+        'musicians' => 'B:満園庄太郎　D:黒瀬蛙一　K:増田隆宣',
     ],
     [
         'title' => 'ultra soul',
         'version' => '2011',
         'first_work' => "C'mon",
-        'difference' => '"再録
-リズム隊が生音"',
+        'difference' => '再録
+リズム隊が生音',
         'policy' => '別曲扱い',
+        'musicians' => 'B:バリー・スパークス　D:シェーン・ガラース',
     ],
     [
         'title' => 'ultra soul',
@@ -829,30 +853,34 @@ return [
         'first_work' => "B'z",
         'difference' => '全英詞リメイク',
         'policy' => '別曲扱い',
+        'musicians' => 'B:バリー・スパークス　D:シェーン・ガラース',
     ],
     [
         'title' => "IT'S SHOWTIME!!",
         'version' => 'オリジナル',
         'first_work' => "IT'S SHOWTIME!!",
         'difference' => '-',
-        'policy' => '"シングルではベースが徳永氏、ドラムが打ち込み
+        'policy' => 'シングルではベースが徳永氏、ドラムが打ち込み
 アルバムではベースが徳永氏、ドラムがシェーン氏のため
-処理が非常に複雑になるのでアルバムを初回収録作品として扱う"',
+処理が非常に複雑になるのでアルバムを初回収録作品として扱う',
+        'musicians' => 'B:徳永暁人',
     ],
     [
         'title' => "IT'S SHOWTIME!!",
         'version' => '同名',
         'first_work' => 'BIG MACHINE',
-        'difference' => '"ドラム生音
-アウトロの使用ギター変更"',
+        'difference' => 'ドラム生音
+アウトロの使用ギター変更',
         'policy' => '別曲扱い',
+        'musicians' => 'B:徳永暁人　D:シェーン・ガラース',
     ],
     [
         'title' => '野性のENERGY',
         'version' => 'オリジナル',
         'first_work' => '野性のENERGY',
         'difference' => '-',
-        'policy' => '',
+        'policy' => '通常通り',
+        'musicians' => 'B:徳永暁人　D:シェーン・ガラース　D:ブライアン・ティッシー',
     ],
     [
         'title' => '野性のENERGY',
@@ -860,13 +888,15 @@ return [
         'first_work' => 'BIG MACHINE',
         'difference' => 'アウトロやミックスなどに変更あり',
         'policy' => '同一曲扱い',
+        'musicians' => 'B:徳永暁人　D:シェーン・ガラース　D:ブライアン・ティッシー',
     ],
     [
         'title' => '愛のバクダン',
         'version' => 'オリジナル',
         'first_work' => '愛のバクダン',
         'difference' => '-',
-        'policy' => '',
+        'policy' => '通常通り',
+        'musicians' => 'B:徳永暁人　D:シェーン・ガラース',
     ],
     [
         'title' => '愛のバクダン',
@@ -874,13 +904,15 @@ return [
         'first_work' => "B'z",
         'difference' => '全英詞リメイク',
         'policy' => '別曲扱い',
+        'musicians' => 'B:バリー・スパークス　D:シェーン・ガラース',
     ],
     [
         'title' => 'OCEAN',
         'version' => 'オリジナル',
         'first_work' => 'OCEAN',
         'difference' => '-',
-        'policy' => '',
+        'policy' => '通常通り',
+        'musicians' => 'B:徳永暁人　D:シェーン・ガラース　C:大田紳一郎',
     ],
     [
         'title' => 'OCEAN',
@@ -888,13 +920,15 @@ return [
         'first_work' => 'MONSTER',
         'difference' => 'リミックス',
         'policy' => '同一曲扱い',
+        'musicians' => 'B:徳永暁人　D:シェーン・ガラース　C:大田紳一郎',
     ],
     [
         'title' => '衝動',
         'version' => 'オリジナル',
         'first_work' => '衝動',
         'difference' => '-',
-        'policy' => '',
+        'policy' => '通常通り',
+        'musicians' => 'B:徳永暁人　D:シェーン・ガラース',
     ],
     [
         'title' => '衝動',
@@ -902,13 +936,15 @@ return [
         'first_work' => 'MONSTER',
         'difference' => '再録',
         'policy' => '別曲扱い',
+        'musicians' => 'B:徳永暁人　D:シェーン・ガラース　C:大田紳一郎　C:徳永暁人',
     ],
     [
         'title' => 'SPLASH!',
         'version' => 'オリジナル',
         'first_work' => 'SPLASH!',
         'difference' => '-',
-        'policy' => '',
+        'policy' => '通常通り',
+        'musicians' => 'B:徳永暁人　D:シェーン・ガラース',
     ],
     [
         'title' => 'SPLASH!',
@@ -916,13 +952,15 @@ return [
         'first_work' => "B'z",
         'difference' => '全英詞リメイク',
         'policy' => '別曲扱い',
+        'musicians' => 'B:バリー・スパークス　D:シェーン・ガラース',
     ],
     [
         'title' => 'FRICTION',
         'version' => 'オリジナル',
         'first_work' => 'SUPER LOVE SONG',
         'difference' => '-',
-        'policy' => '',
+        'policy' => '通常通り',
+        'musicians' => 'B:徳永暁人　D:シェーン・ガラース',
     ],
     [
         'title' => 'FRICTION',
@@ -931,13 +969,15 @@ return [
         'difference' => 'ボーカルとギターの再録',
         'policy' => '再録されたのがボーカルとギターだけで
 サポートメンバー無関係のため同一曲扱い',
+        'musicians' => 'B:徳永暁人　D:シェーン・ガラース',
     ],
     [
         'title' => 'イチブトゼンブ',
         'version' => 'オリジナル',
         'first_work' => 'イチブトゼンブ / DIVE',
         'difference' => '-',
-        'policy' => '',
+        'policy' => '通常通り',
+        'musicians' => 'B:ホアン・アルデレッテ　D:チャド・スミス',
     ],
     [
         'title' => 'イチブトゼンブ',
@@ -945,15 +985,16 @@ return [
         'first_work' => 'MY LONELY TOWN',
         'difference' => 'ピアノとストリングス主体
 打ち込み',
-        'policy' => '打ち込みのため
-検索結果には表示されず',
+        'policy' => '打ち込みのため検索結果には表示されず',
+        'musicians' => '打ち込みのみ',
     ],
     [
         'title' => 'DIVE',
         'version' => 'オリジナル',
         'first_work' => 'イチブトゼンブ / DIVE',
         'difference' => '-',
-        'policy' => '',
+        'policy' => '通常通り',
+        'musicians' => 'B:ホアン・アルデレッテ　D:チャド・スミス　K:増田隆宣',
     ],
     [
         'title' => 'DIVE',
@@ -961,13 +1002,15 @@ return [
         'first_work' => 'MAGIC',
         'difference' => '冒頭カット',
         'policy' => '同一曲扱い',
+        'musicians' => 'B:ホアン・アルデレッテ　D:チャド・スミス　K:増田隆宣',
     ],
     [
         'title' => "Don't Wanna Lie",
         'version' => 'オリジナル',
         'first_work' => "Don't Wanna Lie",
         'difference' => '-',
-        'policy' => '',
+        'policy' => '通常通り',
+        'musicians' => 'B:バリー・スパークス　D:シェーン・ガラース',
     ],
     [
         'title' => "Don't Wanna Lie",
@@ -975,6 +1018,6 @@ return [
         'first_work' => '初回限定盤&通常盤 両購入者特典',
         'difference' => 'ピアノとストリングス主体',
         'policy' => '別曲扱い',
+        'musicians' => '不明',
     ],
-
 ];
