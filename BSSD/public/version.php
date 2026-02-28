@@ -6,7 +6,6 @@ $grouped = [];
 foreach ($rows as $row) {
     $grouped[$row['title']][] = $row;
 }
-
 ?>
 
 <!doctype html>
@@ -24,7 +23,8 @@ foreach ($rows as $row) {
     <nav id="menu"></nav>
 
     <h1>Version</h1>
-    <h2>数ある楽曲のバージョン違いについて、当HPでの取り扱い方を表形式でまとめています。<br>サイズの都合上、PC全画面表示推奨。</h2>
+    <h2>数ある楽曲のバージョン違いについて、当HPでの取り扱い方をまとめています。</h2>
+    <h3>曲名をクリックして詳細を確認できます。</h3>
 
     <div class="table-wrapper">
         <table class="song-table">
@@ -32,33 +32,28 @@ foreach ($rows as $row) {
                 <tr>
                     <th>曲名</th>
                     <th>バージョン</th>
-                    <th>初回収録作品</th>
-                    <th>違い</th>
-                    <th>当HPでの取り扱い</th>
                 </tr>
             </thead>
             <tbody>
             <?php foreach ($grouped as $title => $songs): ?>
-                    <?php $rowspan = count($songs); ?>
-                    <?php foreach ($songs as $i => $song): ?>
-                        <tr>
-                            <?php if ($i === 0): ?>
-                                <td rowspan="<?= $rowspan ?>">
+                <?php $rowspan = count($songs); ?>
+                <?php foreach ($songs as $i => $song): ?>
+                    <tr>
+                        <?php if ($i === 0): ?>
+                            <td rowspan="<?= $rowspan ?>">
+                                <a href="song_detail.php?title=<?= rawurlencode($title) ?>" class="song-link">
                                     <?= htmlspecialchars($title, ENT_QUOTES, 'UTF-8') ?>
-                                </td>
-                            <?php endif; ?>
-
-                            <td><?= nl2br(htmlspecialchars($song['version'], ENT_QUOTES, 'UTF-8')) ?></td>
-                            <td><?= nl2br(htmlspecialchars($song['first_work'], ENT_QUOTES, 'UTF-8')) ?></td>
-                            <td><?= nl2br(htmlspecialchars($song['difference'], ENT_QUOTES, 'UTF-8')) ?></td>
-                            <td><?= nl2br(htmlspecialchars($song['policy'], ENT_QUOTES, 'UTF-8')) ?></td>
-                        </tr>
-                    <?php endforeach; ?>
+                                </a>
+                            </td>
+                        <?php endif; ?>
+                        <td><?= nl2br(htmlspecialchars($song['version'], ENT_QUOTES, 'UTF-8')) ?></td>
+                    </tr>
                 <?php endforeach; ?>
-
+            <?php endforeach; ?>
             </tbody>
         </table>
     </div>
+
     <script src="scripts/menu.js"></script>
     <?php include 'parts/footer.php'; ?>
 </body>
