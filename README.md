@@ -18,12 +18,12 @@ http://bz-support-db.com
 
 ## 各ページの説明
 - **トップページ**（更新履歴含む）[index.php](BSSD/public/index.php)
-- **このページについて**（軽い説明と挨拶文）  [about.php](BSSD/public/about.php)
+- **このページについて**（サイトマップへのリンクと挨拶文）  [about.php](BSSD/public/about.php)
 - **検索機能**　データベースからプルダウン選択肢を取得。最大5人までAND検索可能。 [search.php](BSSD/public/search.php)
 - **オススメ機能**　生年月日から今日のおすすめメンバーを表示。 [recommend.php](BSSD/public/recommend.php)
 - **ランキング**　参加曲数ランキング・検索回数ランキングを表示。（後者は毎日0時にバッチ更新） [ranking.php](BSSD/public/ranking.php)
 - **Q&A**　想定質問と回答の一覧。 [qa.php](BSSD/public/qa.php)
-- **バージョン管理表**　楽曲のバージョン違い一覧。  [version.php](BSSD/public/version.php)
+- **バージョン管理表**　楽曲のバージョン違いまとめ。曲ごとのページへのリンク。  [version.php](BSSD/public/version.php)
 - **コンタクト機能**　ユーザーから管理者へのメッセージ送信。添付ファイルはサーバ保存。  [contact.php](BSSD/public/contact.php)
 - **管理画面**　CRUD機能・CSV入出力。ログイン制御あり。  [Admin.php](BSSD/public/admin/Admin.php)
 
